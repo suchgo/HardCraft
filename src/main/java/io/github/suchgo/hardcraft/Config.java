@@ -1,4 +1,4 @@
-package io.github.hardcraft;
+package io.github.suchgo.hardcraft;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
