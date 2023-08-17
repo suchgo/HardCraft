@@ -2,19 +2,10 @@ package io.github.suchgo.hardcraft;
 
 import com.mojang.logging.LogUtils;
 import io.github.suchgo.hardcraft.init.BlockInit;
+import io.github.suchgo.hardcraft.init.CreativeTabInit;
 import io.github.suchgo.hardcraft.init.ItemInit;
 import net.minecraft.client.Minecraft;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -27,9 +18,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -40,19 +29,6 @@ public class HardCraft
     public static final String MODID = "hardcraft";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
-
-    // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "hardcraft" namespace
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
-
-    // Creates a creative tab with the id "hardcraft:main_tab" for the example item, that is placed after the combat tab
-    public static final RegistryObject<CreativeModeTab> MAIN_TAB = CREATIVE_MODE_TABS.register("main_tab", () -> CreativeModeTab.builder()
-            .title(Component.literal("HardCraft"))
-            .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> ItemInit.BUSH_STICK_ITEM.get().getDefaultInstance())
-            .displayItems((parameters, output) -> {
-                output.accept(ItemInit.BUSH_STICK_ITEM.get());
-                output.accept(BlockInit.BUSH_STICKS_BLOCK.get());
-            }).build());
 
     public HardCraft()
     {
@@ -66,7 +42,7 @@ public class HardCraft
         // Register the Deferred Register to the mod event bus so items get registered
         ItemInit.ITEMS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
-        CREATIVE_MODE_TABS.register(modEventBus);
+        CreativeTabInit.CREATIVE_MODE_TABS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
