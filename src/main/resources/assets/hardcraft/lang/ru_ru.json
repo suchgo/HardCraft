@@ -2,5 +2,7 @@
   "item.hardcraft.bush_stick_item": "Кустовая палка",
   "block.hardcraft.bush_sticks_block": "Блок кустовых палочек",
   "item.hardcraft.primitive_axe": "Примитивный топор",
-  "block.hardcraft.silver_ore": "Серебряная руда"
+  "block.hardcraft.silver_ore": "Серебряная руда",
+  "block.hardcraft.deepslate_silver_ore": "Сереброносный глубинный сланец",
+  "item.hardcraft.grass_thread_item": "Травяная нить"
 }

@@ -16,12 +16,10 @@ public class BlockInit {
     // Create a Deferred Register to hold Blocks which will all be registered under the "hardcraft" namespace
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
 
-    // Creates a new Block with the id "hardcraft:bush_sticks_block"
+    // Blocks
     public static final RegistryObject<Block> BUSH_STICKS_BLOCK = BLOCKS.register("bush_sticks_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).mapColor(MapColor.WOOD)));
 
-    // Creates a new Ore block with the id "hardcraft:silver_ore"
-    public static final RegistryObject<DropExperienceBlock> SILVER_ORE = BLOCKS.register("silver_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_ORE), UniformInt.of(4, 7)));
-
-    // Creates a new Ore block with the id "hardcraft:deepslate_silver_ore"
-    public static final RegistryObject<DropExperienceBlock> DEEPSLATE_SILVER_ORE = BLOCKS.register("deepslate_silver_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(SILVER_ORE.get()), UniformInt.of(4, 7)));
+    // Ores
+    public static final RegistryObject<DropExperienceBlock> SILVER_ORE = BLOCKS.register("silver_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_ORE), UniformInt.of(1, 3)));
+    public static final RegistryObject<DropExperienceBlock> DEEPSLATE_SILVER_ORE = BLOCKS.register("deepslate_silver_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(SILVER_ORE.get()), UniformInt.of(1, 3)));
 }

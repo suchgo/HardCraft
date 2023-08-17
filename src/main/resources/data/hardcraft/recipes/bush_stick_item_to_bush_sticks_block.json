@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "BBB",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "hardcraft:bush_stick_item"
+    }
+  },
+  "result": {
+    "item": "hardcraft:bush_sticks_block"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "hardcraft:bush_sticks_block"
+    }
+  ],
+  "result": {
+    "item": "hardcraft:bush_stick_item",
+    "count": 9
+  }
+}
