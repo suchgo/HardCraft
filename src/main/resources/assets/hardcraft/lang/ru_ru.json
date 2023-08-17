@@ -1,5 +1,6 @@
 {
   "item.hardcraft.bush_stick_item": "Кустовая палка",
   "block.hardcraft.bush_sticks_block": "Блок кустовых палочек",
-  "item.hardcraft.primitive_axe": "Примитивный топор"
+  "item.hardcraft.primitive_axe": "Примитивный топор",
+  "block.hardcraft.silver_ore": "Серебряная руда"
 }
