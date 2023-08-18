@@ -5,10 +5,24 @@ import io.github.suchgo.hardcraft.init.BlockInit;
 import io.github.suchgo.hardcraft.init.CreativeTabInit;
 import io.github.suchgo.hardcraft.init.ItemInit;
 import net.minecraft.client.Minecraft;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageSources;
+import net.minecraft.world.damagesource.DamageType;
+import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -19,7 +33,10 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
+import org.apache.commons.io.file.StandardDeleteOption;
 import org.slf4j.Logger;
+
+import java.util.function.Predicate;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(HardCraft.MODID)
@@ -80,6 +97,18 @@ public class HardCraft
     {
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
+    }
+
+    // Make all Logs breakable only to axes
+    @SubscribeEvent
+    public void unbreakableWood(PlayerEvent.BreakSpeed event) {
+        if (event.getState().getTags().anyMatch(tagKey -> tagKey == BlockTags.LOGS)) {
+            ItemStack itemStack = event.getEntity().getMainHandItem();
+            if (!(itemStack.getItem() instanceof AxeItem)) {
+                event.getEntity().hurt(event.getEntity().damageSources().cactus(), 1f);
+                event.setCanceled(true);
+            }
+        }
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
