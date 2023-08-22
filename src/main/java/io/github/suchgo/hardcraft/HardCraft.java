@@ -4,15 +4,19 @@ import com.mojang.logging.LogUtils;
 import io.github.suchgo.hardcraft.init.BlockInit;
 import io.github.suchgo.hardcraft.init.CreativeTabInit;
 import io.github.suchgo.hardcraft.init.ItemInit;
+import io.github.suchgo.hardcraft.utils.classes.DestroyBlock;
 import net.minecraft.client.Minecraft;
+import net.minecraft.core.BlockPos;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -24,6 +28,9 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
+
+import java.util.*;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(HardCraft.MODID)
@@ -51,9 +58,6 @@ public class HardCraft
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
-        // Register the item to a creative tab
-        modEventBus.addListener(this::addCreative);
-
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -71,13 +75,6 @@ public class HardCraft
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
     }
 
-    // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
-        //if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-            //event.accept(EXAMPLE_BLOCK_ITEM);
-    }
-
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
@@ -89,13 +86,60 @@ public class HardCraft
     // Make all Logs breakable only to axes
     @SubscribeEvent
     public void unbreakableWood(PlayerEvent.BreakSpeed event) {
-        if (event.getState().getTags().anyMatch(tagKey -> tagKey == BlockTags.LOGS)) {
-            ItemStack itemStack = event.getEntity().getMainHandItem();
-            if (!(itemStack.getItem() instanceof AxeItem)) {
-                event.getEntity().hurt(event.getEntity().damageSources().cactus(), 1f);
-                event.setCanceled(true);
-            }
+        if (event.getState().getTags().noneMatch(tagKey -> tagKey == BlockTags.LOGS)) {
+            return;
         }
+
+        ItemStack itemStack = event.getEntity().getMainHandItem();
+        if (itemStack.isEmpty()) {
+            event.getEntity().hurt(event.getEntity().damageSources().cactus(), 1f);
+        }
+
+        if (!(itemStack.getItem() instanceof AxeItem)) {
+            event.setCanceled(true);
+        }
+    }
+
+    // Player take damage if he tries break cactus at empty hand
+    @SubscribeEvent
+    public void damageableCactus(PlayerEvent.BreakSpeed event) {
+        if (!event.getState().is(Blocks.CACTUS)) {
+            return;
+        }
+
+        ItemStack itemStack = event.getEntity().getMainHandItem();
+        if (itemStack.isEmpty()) {
+            event.getEntity().hurt(event.getEntity().damageSources().cactus(), 1f);
+        }
+    }
+
+    Queue<DestroyBlock> commands = new LinkedList<>();
+    @SubscribeEvent
+    public void fallingTrees(BlockEvent.BreakEvent event) {
+        if (event.getState().getTags().noneMatch(tagKey -> tagKey == BlockTags.LOGS)) {
+            return;
+        }
+
+        int y = 1;
+        while (true) {
+            BlockState blockstate = event.getLevel().getBlockState(event.getPos().above(y));
+            if (blockstate.getTags().noneMatch(tagKey -> tagKey == BlockTags.LOGS)) {
+                break;
+            }
+
+            commands.add(new DestroyBlock(event.getLevel(), event.getPos().above(y)));
+            y++;
+        }
+    }
+
+    int ticks;
+    @SubscribeEvent
+    public void onClientTick(TickEvent.ClientTickEvent event){
+        if(ticks % 5 == 0 && !commands.isEmpty()) {
+            commands.element().destroy(true);
+            commands.remove();
+        }
+        ticks++;
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
