@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "hardcraft:block/bush_block"
+    "cross": "hardcraft:block/bush"
   }
 }

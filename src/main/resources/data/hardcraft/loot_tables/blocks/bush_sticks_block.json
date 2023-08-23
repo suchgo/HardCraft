@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "hardcraft:bush_stick_item",
+          "name": "hardcraft:bush_stick",
           "functions": [
             {
               "function": "minecraft:set_count",

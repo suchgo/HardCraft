@@ -1,9 +1,12 @@
 {
-  "item.hardcraft.bush_stick_item": "Кустовая палка",
+  "item.hardcraft.bush_stick": "Кустовая палка",
   "block.hardcraft.bush_sticks_block": "Блок кустовых палочек",
-  "block.hardcraft.bush_block": "Куст",
+  "block.hardcraft.bush": "Куст",
   "item.hardcraft.primitive_axe": "Примитивный топор",
   "block.hardcraft.silver_ore": "Серебряная руда",
   "block.hardcraft.deepslate_silver_ore": "Сереброносный глубинный сланец",
-  "item.hardcraft.grass_thread_item": "Травяная нить"
+  "item.hardcraft.grass_thread": "Травяная нить",
+  "item.hardcraft.metal_detector": "Металлоискатель",
+  "item.hardcraft.metal_detector.valuables": "Найдено: %s около (%s, %s, %s)",
+  "item.hardcraft.metal_detector.no_valuables": "Ничего не найдено"
 }

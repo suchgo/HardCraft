@@ -47,7 +47,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "hardcraft:grass_thread_item",
+              "name": "hardcraft:grass_thread",
               "functions": [
                 {
                   "function": "minecraft:apply_bonus",

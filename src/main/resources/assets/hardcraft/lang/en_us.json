@@ -1,9 +1,12 @@
 {
-  "item.hardcraft.bush_stick_item": "Bush stick",
+  "item.hardcraft.bush_stick": "Bush stick",
   "block.hardcraft.bush_sticks_block": "Block of bush sticks",
-  "block.hardcraft.bush_block": "Bush",
+  "block.hardcraft.bush": "Bush",
   "item.hardcraft.primitive_axe": "Primitive axe",
   "block.hardcraft.silver_ore": "Silver ore",
   "block.hardcraft.deepslate_silver_ore": "Deepslate silver ore",
-  "item.hardcraft.grass_thread_item": "Grass thread"
+  "item.hardcraft.grass_thread": "Grass thread",
+  "item.hardcraft.metal_detector": "Metal detector",
+  "item.hardcraft.metal_detector.valuables": "Found: %s at (%s, %s, %s)",
+  "item.hardcraft.metal_detector.no_valuables": "Nothing found"
 }
