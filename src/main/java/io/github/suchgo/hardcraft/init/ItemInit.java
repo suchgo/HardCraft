@@ -27,4 +27,7 @@ public class ItemInit {
     public static final RegistryObject<BlockItem> SILVER_ORE_ITEM = addToTab(ITEMS.register("silver_ore", () -> new BlockItem(BlockInit.SILVER_ORE.get(), new Item.Properties())));
     public static final RegistryObject<BlockItem> DEEPSLATE_SILVER_ORE_ITEM = addToTab(ITEMS.register("deepslate_silver_ore", () -> new BlockItem(BlockInit.DEEPSLATE_SILVER_ORE.get(), new Item.Properties())));
     public static final RegistryObject<BlockItem> SOUND_BLOCK_ITEM = addToTab(ITEMS.register("sound_block", () -> new BlockItem(BlockInit.SOUND_BLOCK.get(), new Item.Properties())));
+
+    // Food
+    public static final RegistryObject<Item> KOHLRABI_FOOD = addToTab(ITEMS.register("kohlrabi", () -> new Item(new Item.Properties().food(FoodPropertiesInit.KOHLRABI))));
 }
