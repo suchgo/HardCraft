@@ -10,5 +10,6 @@
   "item.hardcraft.metal_detector.valuables": "Found: %s at (%s, %s, %s)",
   "item.hardcraft.metal_detector.no_valuables": "Nothing found",
   "block.hardcraft.sound_block": "Sound block",
-  "item.hardcraft.kohlrabi": "Kohlrabi"
+  "item.hardcraft.kohlrabi": "Kohlrabi",
+  "item.hardcraft.peat_brick": "Peat brick"
 }

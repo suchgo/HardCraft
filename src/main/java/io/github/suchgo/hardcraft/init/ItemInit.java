@@ -1,5 +1,6 @@
 package io.github.suchgo.hardcraft.init;
 
+import io.github.suchgo.hardcraft.item.FuelItem;
 import io.github.suchgo.hardcraft.item.MetalDetectorItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
@@ -15,7 +16,8 @@ public class ItemInit {
 
     // Items/Resources
     public static final RegistryObject<Item> BUSH_STICK_ITEM = addToTab(ITEMS.register("bush_stick", () -> new Item(new Item.Properties().stacksTo(16))));
-    public static final RegistryObject<Item> GRASS_THREAD_ITEM = addToTab(ITEMS.register("grass_thread", () -> new Item(new Item.Properties().stacksTo(64))));
+    public static final RegistryObject<Item> GRASS_THREAD_ITEM = addToTab(ITEMS.register("grass_thread", () -> new Item(new Item.Properties())));
+    public static final RegistryObject<Item> PEAT_BRICK_ITEM = addToTab(ITEMS.register("peat_brick", () -> new FuelItem(new Item.Properties(), 200)));
 
     // Tools
     public static final RegistryObject<AxeItem> PRIMITIVE_AXE = addToTab(ITEMS.register("primitive_axe", () -> new AxeItem(Tiers.WOOD, 2, -3.4f, new Item.Properties().durability(50))));
