@@ -9,6 +9,7 @@
   "item.hardcraft.metal_detector": "Металлоискатель",
   "item.hardcraft.metal_detector.valuables": "Найдено: %s около (%s, %s, %s)",
   "item.hardcraft.metal_detector.no_valuables": "Ничего не найдено",
+  "tooltip.hardcraft.metal_detector": "Находит ценные §eРуды§r",
   "block.hardcraft.sound_block": "Звуковой блок",
   "item.hardcraft.kohlrabi": "Кольраби",
   "item.hardcraft.peat_brick": "Торфяной кирпич"
