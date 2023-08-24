@@ -8,5 +8,6 @@
   "item.hardcraft.grass_thread": "Grass thread",
   "item.hardcraft.metal_detector": "Metal detector",
   "item.hardcraft.metal_detector.valuables": "Found: %s at (%s, %s, %s)",
-  "item.hardcraft.metal_detector.no_valuables": "Nothing found"
+  "item.hardcraft.metal_detector.no_valuables": "Nothing found",
+  "block.hardcraft.sound_block": "Sound block"
 }

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "hardcraft:block/sound_block"
+    }
+  }
+}

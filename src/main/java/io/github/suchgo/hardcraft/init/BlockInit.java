@@ -1,5 +1,6 @@
 package io.github.suchgo.hardcraft.init;
 
+import io.github.suchgo.hardcraft.block.SoundBlock;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -19,6 +20,9 @@ public class BlockInit {
 
     // Blocks
     public static final RegistryObject<Block> BUSH_STICKS_BLOCK = BLOCKS.register("bush_sticks_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).mapColor(MapColor.WOOD)));
+    public static final RegistryObject<Block> SOUND_BLOCK = BLOCKS.register("sound_block", () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.NOTE_BLOCK)));
+
+    // Plants
     public static final RegistryObject<Block> BUSH_BLOCK = BLOCKS.register("bush", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.ACACIA_LEAVES)));
 
     // Ores
