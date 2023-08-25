@@ -13,6 +13,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -36,7 +37,7 @@ public class MetalDetectorItem extends Item {
             for (int i = 0; i <= positionClicked.getY() + 64; i++) {
                 BlockState blockState = pContext.getLevel().getBlockState(positionClicked.below(i));
 
-                if (isValuableBlock(blockState.getBlock())) {
+                if (isValuableBlock(blockState)) {
                     outputValuableCoordinates(positionClicked.below(i), player, blockState.getBlock());
 
                     foundBlock = true;
@@ -58,12 +59,8 @@ public class MetalDetectorItem extends Item {
         player.sendSystemMessage(Component.translatable("item.hardcraft.metal_detector.valuables", I18n.get(block.getDescriptionId()), below.getX(), below.getY(), below.getZ()));
     }
 
-    private boolean isValuableBlock(Block block) {
-        Block[] valuableBlocks = {
-            Blocks.IRON_ORE, Blocks.DIAMOND_ORE
-        };
-
-        return Arrays.asList(valuableBlocks).contains(block);
+    private boolean isValuableBlock(BlockState blockState) {
+        return blockState.is(Tags.Blocks.ORES);
     }
 
     @Override
