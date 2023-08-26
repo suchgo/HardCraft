@@ -1,0 +1,33 @@
+package io.github.suchgo.hardcraft.datagen;
+
+import io.github.suchgo.hardcraft.HardCraft;
+import io.github.suchgo.hardcraft.init.BlockInit;
+import net.minecraft.data.PackOutput;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.RegistryObject;
+
+public class ModBlockStateProvider extends BlockStateProvider {
+    public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
+        super(output, HardCraft.MODID, exFileHelper);
+    }
+
+    @Override
+    protected void registerStatesAndModels() {
+        // Blocks
+        blockWithItem(BlockInit.BUSH_STICKS_BLOCK);
+        blockWithItem(BlockInit.SOUND_BLOCK);
+
+        // Plants
+        simpleBlockWithItem(BlockInit.BUSH_BLOCK.get(), models().cross(BlockInit.BUSH_BLOCK.getId().getPath(), blockTexture(BlockInit.BUSH_BLOCK.get())));
+
+        // Ores
+        blockWithItem(BlockInit.SILVER_ORE);
+        blockWithItem(BlockInit.DEEPSLATE_SILVER_ORE);
+    }
+
+    private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "bush_sticks_block",
+  "ingredients": [
+    {
+      "item": "hardcraft:bush_sticks_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "hardcraft:bush_stick"
+  }
+}

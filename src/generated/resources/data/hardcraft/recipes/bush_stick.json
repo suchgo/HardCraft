@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "bush_stick",
+  "key": {
+    "#": {
+      "item": "hardcraft:bush_stick"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "hardcraft:bush_sticks_block"
+  },
+  "show_notification": true
+}

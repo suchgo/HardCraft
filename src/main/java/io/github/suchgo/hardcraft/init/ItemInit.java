@@ -20,8 +20,11 @@ public class ItemInit {
     public static final RegistryObject<Item> PEAT_BRICK_ITEM = addToTab(ITEMS.register("peat_brick", () -> new FuelItem(new Item.Properties(), 200)));
 
     // Tools
-    public static final RegistryObject<AxeItem> PRIMITIVE_AXE = addToTab(ITEMS.register("primitive_axe", () -> new AxeItem(Tiers.WOOD, 2, -3.4f, new Item.Properties().durability(50))));
+    public static final RegistryObject<Item> PRIMITIVE_AXE = addToTab(ITEMS.register("primitive_axe", () -> new AxeItem(Tiers.WOOD, 2, -3.4f, new Item.Properties().durability(50))));
     public static final RegistryObject<Item> METAL_DETECTOR_ITEM = addToTab(ITEMS.register("metal_detector", () -> new MetalDetectorItem(new Item.Properties().durability(64))));
+
+    // Food
+    public static final RegistryObject<Item> KOHLRABI_ITEM = addToTab(ITEMS.register("kohlrabi", () -> new Item(new Item.Properties().food(FoodPropertiesInit.KOHLRABI))));
 
     // Blocks
     public static final RegistryObject<BlockItem> BUSH_STICKS_BLOCK_ITEM = addToTab(ITEMS.register("bush_sticks_block", () -> new BlockItem(BlockInit.BUSH_STICKS_BLOCK.get(), new Item.Properties().rarity(Rarity.COMMON))));
@@ -29,7 +32,4 @@ public class ItemInit {
     public static final RegistryObject<BlockItem> SILVER_ORE_ITEM = addToTab(ITEMS.register("silver_ore", () -> new BlockItem(BlockInit.SILVER_ORE.get(), new Item.Properties())));
     public static final RegistryObject<BlockItem> DEEPSLATE_SILVER_ORE_ITEM = addToTab(ITEMS.register("deepslate_silver_ore", () -> new BlockItem(BlockInit.DEEPSLATE_SILVER_ORE.get(), new Item.Properties())));
     public static final RegistryObject<BlockItem> SOUND_BLOCK_ITEM = addToTab(ITEMS.register("sound_block", () -> new BlockItem(BlockInit.SOUND_BLOCK.get(), new Item.Properties())));
-
-    // Food
-    public static final RegistryObject<Item> KOHLRABI_FOOD = addToTab(ITEMS.register("kohlrabi", () -> new Item(new Item.Properties().food(FoodPropertiesInit.KOHLRABI))));
 }

@@ -12,6 +12,8 @@ import net.minecraftforge.common.Tags;
 
 public class TagInit {
     public static class Items {
+        public static final TagKey<Item> ORES_SILVER = forgeTag("ores/silver");
+
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(HardCraft.MODID, name));
         }
@@ -23,6 +25,7 @@ public class TagInit {
 
     public static class Blocks {
         public static final TagKey<Block> METAL_DETECTOR_VALUABLES = tag("metal_detector_valuables");
+        public static final TagKey<Block> ORES_SILVER = forgeTag("ores/silver");
 
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(HardCraft.MODID, name));
