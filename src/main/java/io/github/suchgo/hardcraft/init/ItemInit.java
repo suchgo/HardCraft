@@ -32,7 +32,9 @@ public class ItemInit {
     public static final RegistryObject<BlockItem> BUSH_STICKS_SLAB_ITEM = addToTab(ITEMS.register("bush_sticks_slab", () -> new BlockItem(BlockInit.BUSH_STICKS_SLAB.get(), new Item.Properties())));
     public static final RegistryObject<BlockItem> BUSH_STICKS_FENCE_ITEM = addToTab(ITEMS.register("bush_sticks_fence", () -> new BlockItem(BlockInit.BUSH_STICKS_FENCE.get(), new Item.Properties())));
     public static final RegistryObject<BlockItem> BUSH_STICKS_FENCE_GATE_ITEM = addToTab(ITEMS.register("bush_sticks_fence_gate", () -> new BlockItem(BlockInit.BUSH_STICKS_FENCE_GATE.get(), new Item.Properties())));
-    public static final RegistryObject<BlockItem> BUSH_STICKS_WALL_ITEM = addToTab(ITEMS.register("bush_sticks_fence_wall", () -> new BlockItem(BlockInit.BUSH_STICKS_WALL.get(), new Item.Properties())));
+    public static final RegistryObject<BlockItem> BUSH_STICKS_WALL_ITEM = addToTab(ITEMS.register("bush_sticks_wall", () -> new BlockItem(BlockInit.BUSH_STICKS_WALL.get(), new Item.Properties())));
+    public static final RegistryObject<BlockItem> BUSH_STICKS_DOOR_ITEM = addToTab(ITEMS.register("bush_sticks_door", () -> new BlockItem(BlockInit.BUSH_STICKS_DOOR.get(), new Item.Properties())));
+    public static final RegistryObject<BlockItem> BUSH_STICKS_TRAPDOOR_ITEM = addToTab(ITEMS.register("bush_sticks_trapdoor", () -> new BlockItem(BlockInit.BUSH_STICKS_TRAPDOOR.get(), new Item.Properties())));
     public static final RegistryObject<BlockItem> BUSH_STICKS_PRESSURE_PLATE_ITEM = addToTab(ITEMS.register("bush_sticks_pressure_plate", () -> new BlockItem(BlockInit.BUSH_STICKS_PRESSURE_PLATE.get(), new Item.Properties())));
     public static final RegistryObject<BlockItem> BUSH_STICKS_BUTTON_ITEM = addToTab(ITEMS.register("bush_sticks_button", () -> new BlockItem(BlockInit.BUSH_STICKS_BUTTON.get(), new Item.Properties())));
     public static final RegistryObject<BlockItem> BUSH_BLOCK_ITEM = addToTab(ITEMS.register("bush", () -> new BlockItem(BlockInit.BUSH_BLOCK.get(), new Item.Properties())));

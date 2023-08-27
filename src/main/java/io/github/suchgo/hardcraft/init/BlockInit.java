@@ -35,7 +35,13 @@ public class BlockInit {
     public static final RegistryObject<Block> BUSH_STICKS_FENCE_GATE = BLOCKS.register("bush_sticks_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
 
     // Walls
-    public static final RegistryObject<Block> BUSH_STICKS_WALL = BLOCKS.register("bush_sticks_fence_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(BUSH_STICKS_BLOCK.get())));
+    public static final RegistryObject<Block> BUSH_STICKS_WALL = BLOCKS.register("bush_sticks_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(BUSH_STICKS_BLOCK.get())));
+
+    // Doors
+    public static final RegistryObject<Block> BUSH_STICKS_DOOR = BLOCKS.register("bush_sticks_door", () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
+
+    // Trapdoors
+    public static final RegistryObject<Block> BUSH_STICKS_TRAPDOOR = BLOCKS.register("bush_sticks_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
 
     // Pressure Plates
     public static final RegistryObject<Block> BUSH_STICKS_PRESSURE_PLATE = BLOCKS.register("bush_sticks_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));

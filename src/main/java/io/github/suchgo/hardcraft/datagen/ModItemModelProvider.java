@@ -40,6 +40,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // Walls
         wallItem(BlockInit.BUSH_STICKS_WALL, BlockInit.BUSH_STICKS_BLOCK);
+
+        // Doors
+        simpleBlockItem(BlockInit.BUSH_STICKS_DOOR);
     }
 
     private void simpleItem(RegistryObject<Item> item) {
@@ -50,9 +53,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         this.item("item/handheld", "layer0", item);
     }
 
-    private ItemModelBuilder item(String resourceLocation, String key, RegistryObject<Item> item) {
+    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
         return withExistingParent(item.getId().getPath(),
-                new ResourceLocation(resourceLocation)).texture(key,
+                new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(HardCraft.MODID,"item/" + item.getId().getPath()));
     }
 
@@ -66,6 +69,12 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.blockItem("wall", "block/wall_inventory", block, baseBlock);
+    }
+
+    private ItemModelBuilder item(String resourceLocation, String key, RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation(resourceLocation)).texture(key,
+                new ResourceLocation(HardCraft.MODID,"item/" + item.getId().getPath()));
     }
 
     private void blockItem(String key, String mcLocation, RegistryObject<Block> block, RegistryObject<Block> baseBlock) {

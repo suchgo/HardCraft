@@ -40,6 +40,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         // Walls
         wallBlock((WallBlock) BlockInit.BUSH_STICKS_WALL.get(), blockTexture(BlockInit.BUSH_STICKS_BLOCK.get()));
 
+        // Doors
+        doorBlockWithRenderType((DoorBlock) BlockInit.BUSH_STICKS_DOOR.get(), modLoc("block/bush_sticks_door_bottom"), modLoc("block/bush_sticks_door_top"), "cutout");
+
+        // Trapdoors
+        trapdoorBlockWithRenderType((TrapDoorBlock) BlockInit.BUSH_STICKS_TRAPDOOR.get(), modLoc("block/bush_sticks_trapdoor"), true, "cutout");
+        blockItem(BlockInit.BUSH_STICKS_TRAPDOOR, "_bottom");
+
         // Pressure Plates
         pressurePlateBlock((PressurePlateBlock) BlockInit.BUSH_STICKS_PRESSURE_PLATE.get(), blockTexture(BlockInit.BUSH_STICKS_BLOCK.get()));
         blockItem(BlockInit.BUSH_STICKS_PRESSURE_PLATE);
@@ -57,6 +64,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private void blockItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(HardCraft.MODID + ":block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
+    }
+
+    private void blockItem(RegistryObject<Block> blockRegistryObject, String appendix) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(HardCraft.MODID + ":block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

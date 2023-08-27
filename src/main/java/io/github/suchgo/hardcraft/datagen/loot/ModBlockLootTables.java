@@ -38,6 +38,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         // Walls
         this.dropSelf(BlockInit.BUSH_STICKS_WALL.get());
 
+        // Doors
+        this.add(BlockInit.BUSH_STICKS_DOOR.get(), block -> createDoorTable(BlockInit.BUSH_STICKS_DOOR.get()));
+
+        // Trapdoors
+        this.dropSelf(BlockInit.BUSH_STICKS_TRAPDOOR.get());
+
         // Pressure Plates
         this.dropSelf(BlockInit.BUSH_STICKS_PRESSURE_PLATE.get());
 

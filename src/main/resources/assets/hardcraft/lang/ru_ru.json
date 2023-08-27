@@ -19,5 +19,7 @@
   "block.hardcraft.bush_sticks_button": "Кнопка кустовых палочек",
   "block.hardcraft.bush_sticks_fence": "Забор из кустовых палочек",
   "block.hardcraft.bush_sticks_fence_gate": "Ворота из кустовых палочек",
-  "block.hardcraft.bush_sticks_fence_wall": "Стена из кустовых палочек"
+  "block.hardcraft.bush_sticks_wall": "Стена из кустовых палочек",
+  "block.hardcraft.bush_sticks_door": "Дверь из кустовых палочек",
+  "block.hardcraft.bush_sticks_trapdoor": "Люк из кустовых палочек"
 }
