@@ -34,22 +34,42 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // Buttons
         buttonItem(BlockInit.BUSH_STICKS_BUTTON, BlockInit.BUSH_STICKS_BLOCK);
+
+        // Fences
+        fenceItem(BlockInit.BUSH_STICKS_FENCE, BlockInit.BUSH_STICKS_BLOCK);
+
+        // Walls
+        wallItem(BlockInit.BUSH_STICKS_WALL, BlockInit.BUSH_STICKS_BLOCK);
     }
 
-    private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
-        return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(HardCraft.MODID,"item/" + item.getId().getPath()));
+    private void simpleItem(RegistryObject<Item> item) {
+        this.item("item/generated", "layer0", item);
     }
 
-    private ItemModelBuilder simpleHandheldItem(RegistryObject<Item> item) {
+    private void simpleHandheldItem(RegistryObject<Item> item) {
+        this.item("item/handheld", "layer0", item);
+    }
+
+    private ItemModelBuilder item(String resourceLocation, String key, RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(resourceLocation)).texture(key,
                 new ResourceLocation(HardCraft.MODID,"item/" + item.getId().getPath()));
     }
 
     public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
-        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
-                .texture("texture",  new ResourceLocation(HardCraft.MODID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+        this.blockItem("texture", "block/button_inventory", block, baseBlock);
+    }
+
+    public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.blockItem("texture", "block/fence_inventory", block, baseBlock);
+    }
+
+    public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.blockItem("wall", "block/wall_inventory", block, baseBlock);
+    }
+
+    private void blockItem(String key, String mcLocation, RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc(mcLocation))
+                .texture(key,  new ResourceLocation(HardCraft.MODID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 }

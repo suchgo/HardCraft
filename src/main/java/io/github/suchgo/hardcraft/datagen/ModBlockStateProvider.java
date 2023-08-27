@@ -30,6 +30,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlock((SlabBlock) BlockInit.BUSH_STICKS_SLAB.get(), blockTexture(BlockInit.BUSH_STICKS_BLOCK.get()), blockTexture(BlockInit.BUSH_STICKS_BLOCK.get()));
         blockItem(BlockInit.BUSH_STICKS_SLAB);
 
+        // Fences
+        fenceBlock((FenceBlock) BlockInit.BUSH_STICKS_FENCE.get(), blockTexture(BlockInit.BUSH_STICKS_BLOCK.get()));
+
+        // Fence Gates
+        fenceGateBlock((FenceGateBlock) BlockInit.BUSH_STICKS_FENCE_GATE.get(), blockTexture(BlockInit.BUSH_STICKS_BLOCK.get()));
+        blockItem(BlockInit.BUSH_STICKS_FENCE_GATE);
+
+        // Walls
+        wallBlock((WallBlock) BlockInit.BUSH_STICKS_WALL.get(), blockTexture(BlockInit.BUSH_STICKS_BLOCK.get()));
+
         // Pressure Plates
         pressurePlateBlock((PressurePlateBlock) BlockInit.BUSH_STICKS_PRESSURE_PLATE.get(), blockTexture(BlockInit.BUSH_STICKS_BLOCK.get()));
         blockItem(BlockInit.BUSH_STICKS_PRESSURE_PLATE);

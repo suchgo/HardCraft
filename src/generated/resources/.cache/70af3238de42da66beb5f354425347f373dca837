@@ -1,7 +1,10 @@
-// 1.20.1	2023-08-27T16:43:46.1977579	Block Tags
+// 1.20.1	2023-08-27T19:46:21.4062768	Block Tags
 15b7393a26ab797cd063f8540a579f9db881d1b6 data/forge/tags/blocks/needs_wood_tool.json
 021e86d55679a27d4519fa177cd4425c51105d50 data/forge/tags/blocks/ores.json
 dcfd38ef283d131ffce5fd23cdf45c7ac58be4ef data/forge/tags/blocks/ores/silver.json
+e71b4d9106c3da4a7450143e943c3f0586ab0cd1 data/minecraft/tags/blocks/fences.json
+cb0b1f64f88f3cf07a6a99022dea680614bd611c data/minecraft/tags/blocks/fence_gates.json
 15b7393a26ab797cd063f8540a579f9db881d1b6 data/minecraft/tags/blocks/mineable/axe.json
 dcfd38ef283d131ffce5fd23cdf45c7ac58be4ef data/minecraft/tags/blocks/mineable/pickaxe.json
 dcfd38ef283d131ffce5fd23cdf45c7ac58be4ef data/minecraft/tags/blocks/needs_iron_tool.json
+88156c511d10a0e75d370ddbc2a0d6e04136411f data/minecraft/tags/blocks/walls.json

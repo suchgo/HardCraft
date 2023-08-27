@@ -16,5 +16,8 @@
   "block.hardcraft.bush_sticks_stairs": "Лестница кустовых палочек",
   "block.hardcraft.bush_sticks_slab": "Плита кустовых палочек",
   "block.hardcraft.bush_sticks_pressure_plate": "Нажимная плита кустовых палочек",
-  "block.hardcraft.bush_sticks_button": "Кнопка кустовых палочек"
+  "block.hardcraft.bush_sticks_button": "Кнопка кустовых палочек",
+  "block.hardcraft.bush_sticks_fence": "Забор из кустовых палочек",
+  "block.hardcraft.bush_sticks_fence_gate": "Ворота из кустовых палочек",
+  "block.hardcraft.bush_sticks_fence_wall": "Стена из кустовых палочек"
 }

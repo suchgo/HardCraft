@@ -1,7 +1,10 @@
-// 1.20.1	2023-08-27T18:35:57.0133347	Loot Tables
+// 1.20.1	2023-08-27T19:46:21.4082775	Loot Tables
 25e54a7dc0505f97dc4e80613be6e1800684a152 data/hardcraft/loot_tables/blocks/bush.json
 bf88f8140aae7add00170d8e81ad101db852b166 data/hardcraft/loot_tables/blocks/bush_sticks_block.json
 351dfb3029143df600e1e6b710456ee5493b3c09 data/hardcraft/loot_tables/blocks/bush_sticks_button.json
+bfd2012594573fa9ae9d703b2fd63b75b5459967 data/hardcraft/loot_tables/blocks/bush_sticks_fence.json
+0174dc2d311afd499cecb404133d4090fba85dc9 data/hardcraft/loot_tables/blocks/bush_sticks_fence_gate.json
+29c3290c0105fff9bf3b638c280f7a427335dbab data/hardcraft/loot_tables/blocks/bush_sticks_fence_wall.json
 3efd9fb33b9c70bc9902b8535fc7ac0ba8375ad0 data/hardcraft/loot_tables/blocks/bush_sticks_pressure_plate.json
 c5746a071be39fa5f6f084f414a847dcc6ef9401 data/hardcraft/loot_tables/blocks/bush_sticks_slab.json
 6522e4700fd6ef0d5dae5301d5cf45c68991d30a data/hardcraft/loot_tables/blocks/bush_sticks_stairs.json

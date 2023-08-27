@@ -50,6 +50,18 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 BlockInit.SILVER_ORE.get(),
                 BlockInit.DEEPSLATE_SILVER_ORE.get()
         );
+
+        this.tag(BlockTags.FENCES).add(
+                BlockInit.BUSH_STICKS_FENCE.get()
+        );
+
+        this.tag(BlockTags.FENCE_GATES).add(
+                BlockInit.BUSH_STICKS_FENCE_GATE.get()
+        );
+
+        this.tag(BlockTags.WALLS).add(
+                BlockInit.BUSH_STICKS_WALL.get()
+        );
     }
 
     @Override

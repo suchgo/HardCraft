@@ -16,5 +16,8 @@
   "block.hardcraft.bush_sticks_stairs": "Bush sticks stairs",
   "block.hardcraft.bush_sticks_slab": "Bush sticks slab",
   "block.hardcraft.bush_sticks_pressure_plate": "Bush sticks pressure plate",
-  "block.hardcraft.bush_sticks_button": "Bush sticks button"
+  "block.hardcraft.bush_sticks_button": "Bush sticks button",
+  "block.hardcraft.bush_sticks_fence": "Bush sticks fence",
+  "block.hardcraft.bush_sticks_fence_gate": "Bush sticks fence gate",
+  "block.hardcraft.bush_sticks_fence_wall": "Bush sticks wall"
 }

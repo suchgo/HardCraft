@@ -1,6 +1,7 @@
 package io.github.suchgo.hardcraft.init;
 
 import io.github.suchgo.hardcraft.block.SoundBlock;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -26,6 +27,15 @@ public class BlockInit {
 
     // Slabs
     public static final RegistryObject<Block> BUSH_STICKS_SLAB = BLOCKS.register("bush_sticks_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
+
+    // Fences
+    public static final RegistryObject<Block> BUSH_STICKS_FENCE = BLOCKS.register("bush_sticks_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
+
+    // Fence Gates
+    public static final RegistryObject<Block> BUSH_STICKS_FENCE_GATE = BLOCKS.register("bush_sticks_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+
+    // Walls
+    public static final RegistryObject<Block> BUSH_STICKS_WALL = BLOCKS.register("bush_sticks_fence_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(BUSH_STICKS_BLOCK.get())));
 
     // Pressure Plates
     public static final RegistryObject<Block> BUSH_STICKS_PRESSURE_PLATE = BLOCKS.register("bush_sticks_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));

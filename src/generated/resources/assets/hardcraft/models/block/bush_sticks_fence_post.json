@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "hardcraft:block/bush_sticks_block"
+  }
+}
