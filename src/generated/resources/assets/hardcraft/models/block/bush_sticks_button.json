@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "hardcraft:block/bush_sticks_block"
+  }
+}

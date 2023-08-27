@@ -3,9 +3,8 @@ package io.github.suchgo.hardcraft.datagen;
 import io.github.suchgo.hardcraft.HardCraft;
 import io.github.suchgo.hardcraft.init.BlockInit;
 import net.minecraft.data.PackOutput;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -30,6 +29,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         // Slabs
         slabBlock((SlabBlock) BlockInit.BUSH_STICKS_SLAB.get(), blockTexture(BlockInit.BUSH_STICKS_BLOCK.get()), blockTexture(BlockInit.BUSH_STICKS_BLOCK.get()));
         blockItem(BlockInit.BUSH_STICKS_SLAB);
+
+        // Pressure Plates
+        pressurePlateBlock((PressurePlateBlock) BlockInit.BUSH_STICKS_PRESSURE_PLATE.get(), blockTexture(BlockInit.BUSH_STICKS_BLOCK.get()));
+        blockItem(BlockInit.BUSH_STICKS_PRESSURE_PLATE);
+
+        // Buttons
+        buttonBlock((ButtonBlock) BlockInit.BUSH_STICKS_BUTTON.get(), blockTexture(BlockInit.BUSH_STICKS_BLOCK.get()));
 
         // Plants
         simpleBlockWithItem(BlockInit.BUSH_BLOCK.get(), models().cross(BlockInit.BUSH_BLOCK.getId().getPath(), blockTexture(BlockInit.BUSH_BLOCK.get())));

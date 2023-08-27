@@ -29,6 +29,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         // Slabs
         this.add(BlockInit.BUSH_STICKS_SLAB.get(), createSlabItemTable(BlockInit.BUSH_STICKS_SLAB.get()));
 
+        // Pressure Plates
+        this.dropSelf(BlockInit.BUSH_STICKS_PRESSURE_PLATE.get());
+
+        // Buttons
+        this.dropSelf(BlockInit.BUSH_STICKS_BUTTON.get());
+
         // Plants
         this.dropSelf(BlockInit.BUSH_BLOCK.get());
 

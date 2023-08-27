@@ -14,5 +14,7 @@
   "item.hardcraft.kohlrabi": "Кольраби",
   "item.hardcraft.peat_brick": "Торфяной кирпич",
   "block.hardcraft.bush_sticks_stairs": "Лестница кустовых палочек",
-  "block.hardcraft.bush_sticks_slab": "Плита кустовых палочек"
+  "block.hardcraft.bush_sticks_slab": "Плита кустовых палочек",
+  "block.hardcraft.bush_sticks_pressure_plate": "Нажимная плита кустовых палочек",
+  "block.hardcraft.bush_sticks_button": "Кнопка кустовых палочек"
 }

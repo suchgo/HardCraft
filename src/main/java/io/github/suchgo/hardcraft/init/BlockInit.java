@@ -4,6 +4,8 @@ import io.github.suchgo.hardcraft.block.SoundBlock;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -24,6 +26,12 @@ public class BlockInit {
 
     // Slabs
     public static final RegistryObject<Block> BUSH_STICKS_SLAB = BLOCKS.register("bush_sticks_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
+
+    // Pressure Plates
+    public static final RegistryObject<Block> BUSH_STICKS_PRESSURE_PLATE = BLOCKS.register("bush_sticks_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));
+
+    // Buttons
+    public static final RegistryObject<Block> BUSH_STICKS_BUTTON = BLOCKS.register("bush_sticks_button", () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON), BlockSetType.OAK, 30, true));
 
     // Plants
     public static final RegistryObject<Block> BUSH_BLOCK = BLOCKS.register("bush", () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
