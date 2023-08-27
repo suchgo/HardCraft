@@ -23,14 +23,18 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(BlockInit.SOUND_BLOCK.get());
         this.add(BlockInit.BUSH_STICKS_BLOCK.get(), createSingleItemTable(ItemInit.BUSH_STICK_ITEM.get(), ConstantValue.exactly(9f)));
 
+        // Stairs
+        this.dropSelf(BlockInit.BUSH_STICKS_STAIRS.get());
+
+        // Slabs
+        this.add(BlockInit.BUSH_STICKS_SLAB.get(), createSlabItemTable(BlockInit.BUSH_STICKS_SLAB.get()));
+
         // Plants
         this.dropSelf(BlockInit.BUSH_BLOCK.get());
 
         // Ores
-        this.add(BlockInit.SILVER_ORE.get(),
-                block -> createOreDrop(BlockInit.SILVER_ORE.get(), Items.RAW_IRON));
-        this.add(BlockInit.DEEPSLATE_SILVER_ORE.get(),
-                block -> createOreDrop(BlockInit.DEEPSLATE_SILVER_ORE.get(), Items.RAW_IRON));
+        this.add(BlockInit.SILVER_ORE.get(), createOreDrop(BlockInit.SILVER_ORE.get(), Items.RAW_IRON));
+        this.add(BlockInit.DEEPSLATE_SILVER_ORE.get(), createOreDrop(BlockInit.DEEPSLATE_SILVER_ORE.get(), Items.RAW_IRON));
     }
 
     @Override

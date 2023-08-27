@@ -1,6 +1,8 @@
-// 1.20.1	2023-08-26T20:49:19.8091479	Loot Tables
+// 1.20.1	2023-08-27T17:03:37.7133443	Loot Tables
 25e54a7dc0505f97dc4e80613be6e1800684a152 data/hardcraft/loot_tables/blocks/bush.json
 bf88f8140aae7add00170d8e81ad101db852b166 data/hardcraft/loot_tables/blocks/bush_sticks_block.json
+c5746a071be39fa5f6f084f414a847dcc6ef9401 data/hardcraft/loot_tables/blocks/bush_sticks_slab.json
+6522e4700fd6ef0d5dae5301d5cf45c68991d30a data/hardcraft/loot_tables/blocks/bush_sticks_stairs.json
 12a4aef723bc9bc8be20759c0714ac9e58c01f25 data/hardcraft/loot_tables/blocks/deepslate_silver_ore.json
 df7c2c746f71a79005b5f30d2dc13f7435bbeee5 data/hardcraft/loot_tables/blocks/silver_ore.json
 bc1acc28476b0365b48b42b761bde2dd55b0a1e7 data/hardcraft/loot_tables/blocks/sound_block.json

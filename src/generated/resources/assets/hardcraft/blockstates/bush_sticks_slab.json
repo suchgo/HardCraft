@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "hardcraft:block/bush_sticks_slab"
+    },
+    "type=double": {
+      "model": "hardcraft:block/bush_sticks_block"
+    },
+    "type=top": {
+      "model": "hardcraft:block/bush_sticks_slab_top"
+    }
+  }
+}

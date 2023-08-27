@@ -30,7 +30,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         this.tag(Tags.Blocks.ORES).addTag(TagInit.Blocks.ORES_SILVER);
 
         this.tag(BlockTags.MINEABLE_WITH_AXE).add(
-                BlockInit.BUSH_STICKS_BLOCK.get()
+                BlockInit.BUSH_STICKS_BLOCK.get(),
+                BlockInit.BUSH_STICKS_STAIRS.get(),
+                BlockInit.BUSH_STICKS_SLAB.get()
         );
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
@@ -39,7 +41,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         );
 
         this.tag(Tags.Blocks.NEEDS_WOOD_TOOL).add(
-                BlockInit.BUSH_STICKS_BLOCK.get()
+                BlockInit.BUSH_STICKS_BLOCK.get(),
+                BlockInit.BUSH_STICKS_STAIRS.get(),
+                BlockInit.BUSH_STICKS_SLAB.get()
         );
 
         this.tag(BlockTags.NEEDS_IRON_TOOL).add(

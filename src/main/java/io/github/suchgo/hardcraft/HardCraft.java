@@ -4,19 +4,14 @@ import com.mojang.logging.LogUtils;
 import io.github.suchgo.hardcraft.init.BlockInit;
 import io.github.suchgo.hardcraft.init.CreativeTabInit;
 import io.github.suchgo.hardcraft.init.ItemInit;
-import io.github.suchgo.hardcraft.utils.classes.DestroyBlock;
 import net.minecraft.client.Minecraft;
-import net.minecraft.core.BlockPos;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -28,9 +23,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
-
-import java.util.*;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(HardCraft.MODID)
@@ -111,35 +103,6 @@ public class HardCraft
         if (itemStack.isEmpty()) {
             event.getEntity().hurt(event.getEntity().damageSources().cactus(), 1f);
         }
-    }
-
-    Queue<DestroyBlock> commands = new LinkedList<>();
-    @SubscribeEvent
-    public void fallingTrees(BlockEvent.BreakEvent event) {
-        if (event.getState().getTags().noneMatch(tagKey -> tagKey == BlockTags.LOGS)) {
-            return;
-        }
-
-        int y = 1;
-        while (true) {
-            BlockState blockstate = event.getLevel().getBlockState(event.getPos().above(y));
-            if (blockstate.getTags().noneMatch(tagKey -> tagKey == BlockTags.LOGS)) {
-                break;
-            }
-
-            commands.add(new DestroyBlock(event.getLevel(), event.getPos().above(y)));
-            y++;
-        }
-    }
-
-    int ticks;
-    @SubscribeEvent
-    public void onClientTick(TickEvent.ClientTickEvent event){
-        if(ticks % 5 == 0 && !commands.isEmpty()) {
-            commands.element().destroy(true);
-            commands.remove();
-        }
-        ticks++;
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent

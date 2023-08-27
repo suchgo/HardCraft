@@ -12,5 +12,7 @@
   "tooltip.hardcraft.metal_detector": "Находит ценные §eРуды§r",
   "block.hardcraft.sound_block": "Звуковой блок",
   "item.hardcraft.kohlrabi": "Кольраби",
-  "item.hardcraft.peat_brick": "Торфяной кирпич"
+  "item.hardcraft.peat_brick": "Торфяной кирпич",
+  "block.hardcraft.bush_sticks_stairs": "Лестница кустовых палочек",
+  "block.hardcraft.bush_sticks_slab": "Плита кустовых палочек"
 }

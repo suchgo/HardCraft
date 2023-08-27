@@ -12,5 +12,7 @@
   "tooltip.hardcraft.metal_detector": "Finds valuable §eOres§r",
   "block.hardcraft.sound_block": "Sound block",
   "item.hardcraft.kohlrabi": "Kohlrabi",
-  "item.hardcraft.peat_brick": "Peat brick"
+  "item.hardcraft.peat_brick": "Peat brick",
+  "block.hardcraft.bush_sticks_stairs": "Bush sticks stairs",
+  "block.hardcraft.bush_sticks_slab": "Bush sticks slab"
 }

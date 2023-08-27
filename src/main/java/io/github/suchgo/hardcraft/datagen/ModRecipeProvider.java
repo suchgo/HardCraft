@@ -18,8 +18,10 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
-    private static final List<ItemLike> SILVER_SMELTABLES = List.of(Items.RAW_IRON,
-            BlockInit.SILVER_ORE.get(), BlockInit.DEEPSLATE_SILVER_ORE.get());
+    private static final List<ItemLike> SILVER_SMELTABLES = List.of(
+            BlockInit.SILVER_ORE.get(),
+            BlockInit.DEEPSLATE_SILVER_ORE.get()
+    );
 
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
@@ -42,12 +44,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(BlockInit.BUSH_STICKS_BLOCK.get()).build()))
                 .save(pWriter);*/
 
+        // Simple blocks/items
         nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ItemInit.BUSH_STICK_ITEM.get(), RecipeCategory.MISC, BlockInit.BUSH_STICKS_BLOCK.get(),
-                "hardcraft:bush_stick", "bush_stick","hardcraft:bush_sticks_block", "bush_sticks_block");
+                HardCraft.MODID + ":bush_stick", "bush_stick",HardCraft.MODID + ":bush_sticks_block", "bush_sticks_block");
+
+        // Stairs
+        stairBuilder(ItemInit.BUSH_STICKS_STAIRS_ITEM.get(), Ingredient.of(ItemInit.BUSH_STICKS_BLOCK_ITEM.get())).unlockedBy("has_bush_sticks_block", has(ItemInit.BUSH_STICKS_BLOCK_ITEM.get())).save(pWriter);
+
+        // Slabs
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, ItemInit.BUSH_STICKS_SLAB_ITEM.get(), Ingredient.of(ItemInit.BUSH_STICKS_BLOCK_ITEM.get())).unlockedBy("has_bush_sticks_block", has(ItemInit.BUSH_STICKS_BLOCK_ITEM.get())).save(pWriter);
 
 
+        // Smelting/Blasting
         oreSmelting(pWriter, SILVER_SMELTABLES, RecipeCategory.MISC, Items.IRON_INGOT, 0.25f, 200, "silver");
         oreBlasting(pWriter, SILVER_SMELTABLES, RecipeCategory.MISC, Items.IRON_INGOT, 0.25f, 100, "silver");
+
+        // Cooking
     }
 
     protected static void oreSmelting(@NotNull Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult,

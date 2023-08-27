@@ -2,10 +2,7 @@ package io.github.suchgo.hardcraft.init;
 
 import io.github.suchgo.hardcraft.block.SoundBlock;
 import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.LeavesBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.registries.DeferredRegister;
@@ -22,8 +19,14 @@ public class BlockInit {
     public static final RegistryObject<Block> BUSH_STICKS_BLOCK = BLOCKS.register("bush_sticks_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).mapColor(MapColor.WOOD)));
     public static final RegistryObject<Block> SOUND_BLOCK = BLOCKS.register("sound_block", () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.NOTE_BLOCK)));
 
+    // Stairs
+    public static final RegistryObject<Block> BUSH_STICKS_STAIRS = BLOCKS.register("bush_sticks_stairs", () -> new StairBlock(() -> BUSH_STICKS_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));
+
+    // Slabs
+    public static final RegistryObject<Block> BUSH_STICKS_SLAB = BLOCKS.register("bush_sticks_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
+
     // Plants
-    public static final RegistryObject<Block> BUSH_BLOCK = BLOCKS.register("bush", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.ACACIA_LEAVES)));
+    public static final RegistryObject<Block> BUSH_BLOCK = BLOCKS.register("bush", () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
 
     // Ores
     public static final RegistryObject<Block> SILVER_ORE = BLOCKS.register("silver_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_ORE), UniformInt.of(1, 3)));

@@ -27,7 +27,11 @@ public class ItemInit {
     public static final RegistryObject<Item> KOHLRABI_ITEM = addToTab(ITEMS.register("kohlrabi", () -> new Item(new Item.Properties().food(FoodPropertiesInit.KOHLRABI))));
 
     // Blocks
-    public static final RegistryObject<BlockItem> BUSH_STICKS_BLOCK_ITEM = addToTab(ITEMS.register("bush_sticks_block", () -> new BlockItem(BlockInit.BUSH_STICKS_BLOCK.get(), new Item.Properties().rarity(Rarity.COMMON))));
+    public static final RegistryObject<BlockItem> BUSH_STICKS_BLOCK_ITEM = addToTab(ITEMS.register("bush_sticks_block", () -> new BlockItem(BlockInit.BUSH_STICKS_BLOCK.get(), new Item.Properties())));
+
+    public static final RegistryObject<BlockItem> BUSH_STICKS_STAIRS_ITEM = addToTab(ITEMS.register("bush_sticks_stairs", () -> new BlockItem(BlockInit.BUSH_STICKS_STAIRS.get(), new Item.Properties())));
+
+    public static final RegistryObject<BlockItem> BUSH_STICKS_SLAB_ITEM = addToTab(ITEMS.register("bush_sticks_slab", () -> new BlockItem(BlockInit.BUSH_STICKS_SLAB.get(), new Item.Properties())));
     public static final RegistryObject<BlockItem> BUSH_BLOCK_ITEM = addToTab(ITEMS.register("bush", () -> new BlockItem(BlockInit.BUSH_BLOCK.get(), new Item.Properties())));
     public static final RegistryObject<BlockItem> SILVER_ORE_ITEM = addToTab(ITEMS.register("silver_ore", () -> new BlockItem(BlockInit.SILVER_ORE.get(), new Item.Properties())));
     public static final RegistryObject<BlockItem> DEEPSLATE_SILVER_ORE_ITEM = addToTab(ITEMS.register("deepslate_silver_ore", () -> new BlockItem(BlockInit.DEEPSLATE_SILVER_ORE.get(), new Item.Properties())));

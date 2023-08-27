@@ -1,7 +1,7 @@
-// 1.20.1	2023-08-26T19:39:49.3102963	Block Tags
-822f9893f54951b5b0ec5df8d9999bfdb557a781 data/forge/tags/blocks/needs_wood_tool.json
+// 1.20.1	2023-08-27T16:43:46.1977579	Block Tags
+15b7393a26ab797cd063f8540a579f9db881d1b6 data/forge/tags/blocks/needs_wood_tool.json
 021e86d55679a27d4519fa177cd4425c51105d50 data/forge/tags/blocks/ores.json
 dcfd38ef283d131ffce5fd23cdf45c7ac58be4ef data/forge/tags/blocks/ores/silver.json
-822f9893f54951b5b0ec5df8d9999bfdb557a781 data/minecraft/tags/blocks/mineable/axe.json
+15b7393a26ab797cd063f8540a579f9db881d1b6 data/minecraft/tags/blocks/mineable/axe.json
 dcfd38ef283d131ffce5fd23cdf45c7ac58be4ef data/minecraft/tags/blocks/mineable/pickaxe.json
 dcfd38ef283d131ffce5fd23cdf45c7ac58be4ef data/minecraft/tags/blocks/needs_iron_tool.json

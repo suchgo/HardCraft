@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_raw_iron": {
+    "has_bush_sticks_block": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:raw_iron"
+              "hardcraft:bush_sticks_block"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "hardcraft:iron_ingot_from_blasting_raw_iron"
+        "recipe": "hardcraft:bush_sticks_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_raw_iron",
+      "has_bush_sticks_block",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "hardcraft:iron_ingot_from_blasting_raw_iron"
+      "hardcraft:bush_sticks_slab"
     ]
   },
   "sends_telemetry_event": false
