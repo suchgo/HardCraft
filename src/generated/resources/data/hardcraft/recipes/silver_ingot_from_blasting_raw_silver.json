@@ -5,7 +5,7 @@
   "experience": 0.25,
   "group": "silver",
   "ingredient": {
-    "item": "hardcraft:deepslate_silver_ore"
+    "item": "hardcraft:raw_silver"
   },
-  "result": "minecraft:iron_ingot"
+  "result": "hardcraft:silver_ingot"
 }

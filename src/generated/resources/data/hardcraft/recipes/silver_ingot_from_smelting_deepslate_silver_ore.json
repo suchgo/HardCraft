@@ -7,5 +7,5 @@
   "ingredient": {
     "item": "hardcraft:deepslate_silver_ore"
   },
-  "result": "minecraft:iron_ingot"
+  "result": "hardcraft:silver_ingot"
 }

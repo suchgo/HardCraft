@@ -24,6 +24,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ItemInit.BUSH_STICK_ITEM);
         simpleItem(ItemInit.GRASS_THREAD_ITEM);
         simpleItem(ItemInit.PEAT_BRICK_ITEM);
+        simpleItem(ItemInit.RAW_SILVER_ITEM);
+        simpleItem(ItemInit.SILVER_INGOT_ITEM);
 
         // Tools
         simpleHandheldItem(ItemInit.PRIMITIVE_AXE);

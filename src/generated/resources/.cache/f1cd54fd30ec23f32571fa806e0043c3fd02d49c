@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-27T20:36:45.0417883	Item Models: hardcraft
+// 1.20.1	2023-08-29T00:04:02.8027757	Item Models: hardcraft
 c8bdbf1043ec9cc40c33d0333af6a88d1e0b71ef assets/hardcraft/models/item/bush_stick.json
 5474d7bea07a35a26f2fafecf8221601ed2684eb assets/hardcraft/models/item/bush_sticks_button.json
 805a1c3707b19cd99c4dd175955292df3670793c assets/hardcraft/models/item/bush_sticks_door.json
@@ -9,3 +9,5 @@ c0d009a934899939b04f0f89e66053622c989fc2 assets/hardcraft/models/item/kohlrabi.j
 ffe8dc9b55b5d23ff7cf4c9d4dc4a02adb463de4 assets/hardcraft/models/item/metal_detector.json
 16e1c2ffbb5e99418817631361f6022a5fe3015a assets/hardcraft/models/item/peat_brick.json
 831547953b4113954baeef487e36cbbb6b5e058c assets/hardcraft/models/item/primitive_axe.json
+8a070cb5242128aa7dda103096df590e490ec6e6 assets/hardcraft/models/item/raw_silver.json
+85c930ba00fb3963f18e33b9304be33fefc0b169 assets/hardcraft/models/item/silver_ingot.json

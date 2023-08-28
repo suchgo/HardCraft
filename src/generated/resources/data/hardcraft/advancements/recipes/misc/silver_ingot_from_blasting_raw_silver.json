@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_deepslate_silver_ore": {
+    "has_raw_silver": {
       "conditions": {
         "items": [
           {
             "items": [
-              "hardcraft:deepslate_silver_ore"
+              "hardcraft:raw_silver"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "hardcraft:iron_ingot_from_smelting_deepslate_silver_ore"
+        "recipe": "hardcraft:silver_ingot_from_blasting_raw_silver"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_deepslate_silver_ore",
+      "has_raw_silver",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "hardcraft:iron_ingot_from_smelting_deepslate_silver_ore"
+      "hardcraft:silver_ingot_from_blasting_raw_silver"
     ]
   },
   "sends_telemetry_event": false

@@ -21,5 +21,7 @@
   "block.hardcraft.bush_sticks_fence_gate": "Bush sticks fence gate",
   "block.hardcraft.bush_sticks_wall": "Bush sticks wall",
   "block.hardcraft.bush_sticks_door": "Bush sticks door",
-  "block.hardcraft.bush_sticks_trapdoor": "Bush sticks trapdoor"
+  "block.hardcraft.bush_sticks_trapdoor": "Bush sticks trapdoor",
+  "item.hardcraft.raw_silver": "Raw silver",
+  "item.hardcraft.silver_ingot": "Silver ingot"
 }

@@ -54,8 +54,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(BlockInit.BUSH_BLOCK.get());
 
         // Ores
-        this.add(BlockInit.SILVER_ORE.get(), createOreDrop(BlockInit.SILVER_ORE.get(), Items.RAW_IRON));
-        this.add(BlockInit.DEEPSLATE_SILVER_ORE.get(), createOreDrop(BlockInit.DEEPSLATE_SILVER_ORE.get(), Items.RAW_IRON));
+        this.add(BlockInit.SILVER_ORE.get(), createOreDrop(BlockInit.SILVER_ORE.get(), ItemInit.RAW_SILVER_ITEM.get()));
+        this.add(BlockInit.DEEPSLATE_SILVER_ORE.get(), createOreDrop(BlockInit.DEEPSLATE_SILVER_ORE.get(), ItemInit.RAW_SILVER_ITEM.get()));
     }
 
     @Override

@@ -26,6 +26,7 @@ public class TagInit {
     public static class Blocks {
         public static final TagKey<Block> METAL_DETECTOR_VALUABLES = tag("metal_detector_valuables");
         public static final TagKey<Block> ORES_SILVER = forgeTag("ores/silver");
+        public static final TagKey<Block> NEEDS_SILVER_TOOl = tag("needs_silver_tool");
 
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(HardCraft.MODID, name));

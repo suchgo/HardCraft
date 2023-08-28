@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "hardcraft:bush_sticks_door"
+          "name": "hardcraft:bush_sticks_wall"
         }
       ],
       "rolls": 1.0

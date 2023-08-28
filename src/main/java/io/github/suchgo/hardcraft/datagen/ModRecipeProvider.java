@@ -20,7 +20,8 @@ import java.util.function.Consumer;
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
     private static final List<ItemLike> SILVER_SMELTABLES = List.of(
             BlockInit.SILVER_ORE.get(),
-            BlockInit.DEEPSLATE_SILVER_ORE.get()
+            BlockInit.DEEPSLATE_SILVER_ORE.get(),
+            ItemInit.RAW_SILVER_ITEM.get()
     );
 
     public ModRecipeProvider(PackOutput pOutput) {
@@ -56,8 +57,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 
         // Smelting/Blasting
-        oreSmelting(pWriter, SILVER_SMELTABLES, RecipeCategory.MISC, Items.IRON_INGOT, 0.25f, 200, "silver");
-        oreBlasting(pWriter, SILVER_SMELTABLES, RecipeCategory.MISC, Items.IRON_INGOT, 0.25f, 100, "silver");
+        oreSmelting(pWriter, SILVER_SMELTABLES, RecipeCategory.MISC, ItemInit.SILVER_INGOT_ITEM.get(), 0.25f, 200, "silver");
+        oreBlasting(pWriter, SILVER_SMELTABLES, RecipeCategory.MISC, ItemInit.SILVER_INGOT_ITEM.get(), 0.25f, 100, "silver");
 
         // Cooking
     }

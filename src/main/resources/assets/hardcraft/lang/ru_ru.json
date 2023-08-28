@@ -21,5 +21,7 @@
   "block.hardcraft.bush_sticks_fence_gate": "Ворота из кустовых палочек",
   "block.hardcraft.bush_sticks_wall": "Стена из кустовых палочек",
   "block.hardcraft.bush_sticks_door": "Дверь из кустовых палочек",
-  "block.hardcraft.bush_sticks_trapdoor": "Люк из кустовых палочек"
+  "block.hardcraft.bush_sticks_trapdoor": "Люк из кустовых палочек",
+  "item.hardcraft.raw_silver": "Рудное серебро",
+  "item.hardcraft.silver_ingot": "Серебряный слиток"
 }

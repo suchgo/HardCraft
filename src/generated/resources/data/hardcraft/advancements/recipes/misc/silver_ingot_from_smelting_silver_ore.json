@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "hardcraft:iron_ingot_from_blasting_silver_ore"
+        "recipe": "hardcraft:silver_ingot_from_smelting_silver_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "hardcraft:iron_ingot_from_blasting_silver_ore"
+      "hardcraft:silver_ingot_from_smelting_silver_ore"
     ]
   },
   "sends_telemetry_event": false
