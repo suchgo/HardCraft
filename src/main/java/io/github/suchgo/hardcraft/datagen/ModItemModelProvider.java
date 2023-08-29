@@ -26,6 +26,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ItemInit.PEAT_BRICK_ITEM);
         simpleItem(ItemInit.RAW_SILVER_ITEM);
         simpleItem(ItemInit.SILVER_INGOT_ITEM);
+        simpleItem(ItemInit.BANDAGE_ITEM);
 
         // Tools
         simpleHandheldItem(ItemInit.PRIMITIVE_AXE);

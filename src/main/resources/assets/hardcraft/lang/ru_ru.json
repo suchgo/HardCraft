@@ -23,5 +23,7 @@
   "block.hardcraft.bush_sticks_door": "Дверь из кустовых палочек",
   "block.hardcraft.bush_sticks_trapdoor": "Люк из кустовых палочек",
   "item.hardcraft.raw_silver": "Рудное серебро",
-  "item.hardcraft.silver_ingot": "Серебряный слиток"
+  "item.hardcraft.silver_ingot": "Серебряный слиток",
+  "item.hardcraft.bandage": "Бинт",
+  "tooltip.hardcraft.bandage": "Останавливает кровотечение и исцеляет"
 }

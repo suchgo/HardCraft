@@ -1,5 +1,6 @@
 package io.github.suchgo.hardcraft.init;
 
+import io.github.suchgo.hardcraft.item.BandageItem;
 import io.github.suchgo.hardcraft.item.FuelItem;
 import io.github.suchgo.hardcraft.item.MetalDetectorItem;
 import net.minecraft.world.item.*;
@@ -20,6 +21,7 @@ public class ItemInit {
     public static final RegistryObject<Item> PEAT_BRICK_ITEM = addToTab(ITEMS.register("peat_brick", () -> new FuelItem(new Item.Properties(), 200)));
     public static final RegistryObject<Item> RAW_SILVER_ITEM = addToTab(ITEMS.register("raw_silver", () -> new Item(new Item.Properties())));
     public static final RegistryObject<Item> SILVER_INGOT_ITEM = addToTab(ITEMS.register("silver_ingot", () -> new Item(new Item.Properties())));
+    public static final RegistryObject<Item> BANDAGE_ITEM = addToTab(ITEMS.register("bandage", () -> new BandageItem(new Item.Properties())));
 
     // Tools
     public static final RegistryObject<Item> PRIMITIVE_AXE = addToTab(ITEMS.register("primitive_axe", () -> new AxeItem(Tiers.WOOD, 2, -3.4f, new Item.Properties().durability(50))));

@@ -23,5 +23,7 @@
   "block.hardcraft.bush_sticks_door": "Bush sticks door",
   "block.hardcraft.bush_sticks_trapdoor": "Bush sticks trapdoor",
   "item.hardcraft.raw_silver": "Raw silver",
-  "item.hardcraft.silver_ingot": "Silver ingot"
+  "item.hardcraft.silver_ingot": "Silver ingot",
+  "item.hardcraft.bandage": "Bandage",
+  "tooltip.hardcraft.bandage": "Stops bleeding and heals"
 }
