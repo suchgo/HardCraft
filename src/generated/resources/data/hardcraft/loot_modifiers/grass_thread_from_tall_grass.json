@@ -1,0 +1,17 @@
+{
+  "type": "hardcraft:add_item",
+  "conditions": [
+    {
+      "block": "minecraft:tall_grass",
+      "condition": "minecraft:block_state_property"
+    },
+    {
+      "condition": "minecraft:survives_explosion"
+    },
+    {
+      "chance": 0.4,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "item": "hardcraft:grass_thread"
+}

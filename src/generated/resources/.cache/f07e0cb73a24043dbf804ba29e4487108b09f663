@@ -1,0 +1,5 @@
+// 1.20.1	2023-08-31T19:14:26.9118758	Global Loot Modifiers : hardcraft
+be64852a991977c951b96dda652f6f753baec2ec data/forge/loot_modifiers/global_loot_modifiers.json
+e5414b41f7339e2d4b78fd39e981414f6e6d6b42 data/hardcraft/loot_modifiers/grass_thread_from_grass.json
+037b2e7a48ec5d3e79f63d65208bbdc261bd3475 data/hardcraft/loot_modifiers/grass_thread_from_tall_grass.json
+6a168c915253d4b3f78fd6f6391da93dffaabe4e data/hardcraft/loot_modifiers/metal_detector_from_zombie.json

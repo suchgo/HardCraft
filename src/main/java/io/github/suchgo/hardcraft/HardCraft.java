@@ -5,10 +5,9 @@ import io.github.suchgo.hardcraft.init.BlockInit;
 import io.github.suchgo.hardcraft.init.CreativeTabInit;
 import io.github.suchgo.hardcraft.init.ItemInit;
 import io.github.suchgo.hardcraft.init.SoundInit;
+import io.github.suchgo.hardcraft.init.LootModifiersInit;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.telemetry.events.WorldLoadEvent;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.util.profiling.jfr.event.WorldLoadFinishedEvent;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.GameRules;
@@ -16,7 +15,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.event.server.ServerStartedEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -53,6 +51,8 @@ public class HardCraft
         CreativeTabInit.CREATIVE_MODE_TABS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so sounds get registered
         SoundInit.SOUND_EVENTS.register(modEventBus);
+        // Register the Deferred Register to the mod event bus so loot modifiers get registered
+        LootModifiersInit.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
