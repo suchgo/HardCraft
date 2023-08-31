@@ -26,5 +26,6 @@
   "item.hardcraft.silver_ingot": "Silver ingot",
   "item.hardcraft.bandage": "Bandage",
   "tooltip.hardcraft.bandage": "Stops bleeding and heals",
-  "sounds.hardcraft.bandage_use": "Bandage used"
+  "sounds.hardcraft.bandage_use": "Bandage used",
+  "effect.hardcraft.bleeding": "Bleeding"
 }

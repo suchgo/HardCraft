@@ -5,7 +5,6 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.registries.DeferredRegister;
@@ -50,7 +49,7 @@ public class BlockInit {
     public static final RegistryObject<Block> BUSH_STICKS_BUTTON = BLOCKS.register("bush_sticks_button", () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON), BlockSetType.OAK, 30, true));
 
     // Plants
-    public static final RegistryObject<Block> BUSH_BLOCK = BLOCKS.register("bush", () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)));
+    public static final RegistryObject<Block> BUSH_BLOCK = BLOCKS.register("bush", () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH).mapColor(MapColor.PLANT).noOcclusion()));
 
     // Ores
     public static final RegistryObject<Block> SILVER_ORE = BLOCKS.register("silver_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_ORE), UniformInt.of(1, 3)));

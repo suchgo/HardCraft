@@ -1,11 +1,7 @@
 package io.github.suchgo.hardcraft;
 
 import com.mojang.logging.LogUtils;
-import io.github.suchgo.hardcraft.init.BlockInit;
-import io.github.suchgo.hardcraft.init.CreativeTabInit;
-import io.github.suchgo.hardcraft.init.ItemInit;
-import io.github.suchgo.hardcraft.init.SoundInit;
-import io.github.suchgo.hardcraft.init.LootModifiersInit;
+import io.github.suchgo.hardcraft.init.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.AxeItem;
@@ -53,6 +49,8 @@ public class HardCraft
         SoundInit.SOUND_EVENTS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so loot modifiers get registered
         LootModifiersInit.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
+        // Register the Deferred Register to the mod event bus so mob effects get registered
+        EffectInit.MOB_EFFECTS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

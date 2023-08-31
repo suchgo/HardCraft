@@ -26,7 +26,7 @@ public class CreativeTabInit {
     public static final RegistryObject<CreativeModeTab> MAIN_TAB = CREATIVE_MODE_TABS.register("main_tab", () -> CreativeModeTab.builder()
             .title(Component.literal("HardCraft"))
             .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> ItemInit.BUSH_STICK_ITEM.get().getDefaultInstance())
+            .icon(() -> ItemInit.PRIMITIVE_AXE.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 MAIN_TAB_ITEMS.forEach(itemLike -> output.accept(itemLike.get()));
             }).build());

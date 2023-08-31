@@ -2,6 +2,7 @@ package io.github.suchgo.hardcraft.item;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
+import io.github.suchgo.hardcraft.init.EffectInit;
 import io.github.suchgo.hardcraft.init.SoundInit;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.network.chat.Component;
@@ -51,6 +52,7 @@ public class BandageItem extends Item {
     @Override
     public @NotNull ItemStack finishUsingItem(@NotNull ItemStack itemStack, @NotNull Level level, @NotNull LivingEntity livingEntity) {
         livingEntity.heal(4f);
+        livingEntity.removeEffect(EffectInit.BLEEDING_EFFECT.get());
 
         if (!(livingEntity instanceof Player) || !((Player)livingEntity).getAbilities().instabuild) {
             itemStack.shrink(1);

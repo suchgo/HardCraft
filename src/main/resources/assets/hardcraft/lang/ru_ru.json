@@ -26,5 +26,6 @@
   "item.hardcraft.silver_ingot": "Серебряный слиток",
   "item.hardcraft.bandage": "Бинт",
   "tooltip.hardcraft.bandage": "Останавливает кровотечение и исцеляет",
-  "sounds.hardcraft.bandage_use": "Использование бинта"
+  "sounds.hardcraft.bandage_use": "Использование бинта",
+  "effect.hardcraft.bleeding": "Кровотечение"
 }
