@@ -1,0 +1,8 @@
+{
+  "bandage_use": {
+    "subtitle": "sounds.hardcraft.bandage_use",
+    "sounds": [
+      "hardcraft:bandage_use"
+    ]
+  }
+}

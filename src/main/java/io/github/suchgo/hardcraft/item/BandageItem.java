@@ -2,10 +2,8 @@ package io.github.suchgo.hardcraft.item;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import net.minecraft.client.Timer;
-import net.minecraft.client.model.HumanoidModel;
+import io.github.suchgo.hardcraft.init.SoundInit;
 import net.minecraft.client.player.LocalPlayer;
-import net.minecraft.client.renderer.ItemInHandRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
@@ -13,6 +11,7 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -26,6 +25,7 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class BandageItem extends Item {
+    private boolean shouldPlayUseSound = false;
     public BandageItem(Properties properties) {
         super(properties);
     }
@@ -33,8 +33,8 @@ public class BandageItem extends Item {
     @Override
     public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level level, @NotNull Player player, @NotNull InteractionHand interactionHand) {
         ItemStack itemstack = player.getItemInHand(interactionHand);
-
         player.startUsingItem(interactionHand);
+        shouldPlayUseSound = true;
         return InteractionResultHolder.consume(itemstack);
     }
 
@@ -77,6 +77,14 @@ public class BandageItem extends Item {
                     if (f1 < 9F) {
                         float f2 = Mth.abs(Mth.cos(f / 14.0F * (float)Math.PI) * 0.1F);
                         poseStack.translate(0.0F, f2, 0.0F);
+                    }
+
+                    int j = player.getUseItemRemainingTicks();
+                    boolean flag = j <= itemInHand.getUseDuration() - 4;
+
+                    if (flag && j % 4 == 0 && shouldPlayUseSound) {
+                        shouldPlayUseSound = false;
+                        player.playSound(SoundInit.BANDAGE_USE.get(), 0.5F, player.level().random.nextFloat() * 0.1F + 0.9F);
                     }
 
                     float f3 = 1.0F - (float)Math.pow((double)f1, 27.0D);

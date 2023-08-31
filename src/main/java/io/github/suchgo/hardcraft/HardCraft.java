@@ -4,14 +4,19 @@ import com.mojang.logging.LogUtils;
 import io.github.suchgo.hardcraft.init.BlockInit;
 import io.github.suchgo.hardcraft.init.CreativeTabInit;
 import io.github.suchgo.hardcraft.init.ItemInit;
+import io.github.suchgo.hardcraft.init.SoundInit;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.telemetry.events.WorldLoadEvent;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.profiling.jfr.event.WorldLoadFinishedEvent;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.event.server.ServerStartedEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -46,6 +51,8 @@ public class HardCraft
         ItemInit.ITEMS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
         CreativeTabInit.CREATIVE_MODE_TABS.register(modEventBus);
+        // Register the Deferred Register to the mod event bus so sounds get registered
+        SoundInit.SOUND_EVENTS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -73,6 +80,9 @@ public class HardCraft
     {
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
+
+        LOGGER.info("Game rule 'naturalRegeneration' set to false");
+        event.getServer().getWorldData().getGameRules().getRule(GameRules.RULE_NATURAL_REGENERATION).set(false, event.getServer());
     }
 
     // Make all Logs breakable only to axes
