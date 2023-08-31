@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "has_bush_stick": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "hardcraft:bush_stick"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "hardcraft:textures/block/silver_ore.png",
+    "description": {
+      "translate": "advancements.hardcraft.root.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "hardcraft:bush_stick"
+    },
+    "show_toast": false,
+    "title": {
+      "text": "Hardcraft"
+    }
+  },
+  "requirements": [
+    [
+      "has_bush_stick"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

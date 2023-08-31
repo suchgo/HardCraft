@@ -1,0 +1,44 @@
+{
+  "parent": "hardcraft:primitive_axe",
+  "criteria": {
+    "has_metal_detector": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "hardcraft:metal_detector"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.hardcraft.metal_detector.description",
+      "with": [
+        {
+          "translate": "item.hardcraft.metal_detector"
+        }
+      ]
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "hardcraft:metal_detector",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.hardcraft.metal_detector.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_metal_detector"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

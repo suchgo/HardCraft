@@ -27,5 +27,10 @@
   "item.hardcraft.bandage": "Bandage",
   "tooltip.hardcraft.bandage": "Stops bleeding and heals",
   "sounds.hardcraft.bandage_use": "Bandage used",
-  "effect.hardcraft.bleeding": "Bleeding"
+  "effect.hardcraft.bleeding": "Bleeding",
+  "advancements.hardcraft.root.description": "Hard, harder, pain...",
+  "advancements.hardcraft.primitive_axe.title": "First tool",
+  "advancements.hardcraft.primitive_axe.description": "Craft %s",
+  "advancements.hardcraft.metal_detector.title": "Ore founder",
+  "advancements.hardcraft.metal_detector.description": "Craft %s"
 }
