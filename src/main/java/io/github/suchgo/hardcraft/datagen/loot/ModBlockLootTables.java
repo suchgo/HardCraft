@@ -4,9 +4,11 @@ import io.github.suchgo.hardcraft.init.BlockInit;
 import io.github.suchgo.hardcraft.init.ItemInit;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.IntRange;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraft.world.level.storage.loot.providers.number.NumberProviders;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 
@@ -51,7 +53,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(BlockInit.BUSH_STICKS_BUTTON.get());
 
         // Plants
-        this.dropSelf(BlockInit.BUSH_BLOCK.get());
+        this.add(BlockInit.WILD_BUSH_BLOCK.get(), createSingleItemTable(ItemInit.BUSH_STICK_ITEM.get(), UniformGenerator.between(1f, 3f)));
 
         // Ores
         this.add(BlockInit.SILVER_ORE.get(), createOreDrop(BlockInit.SILVER_ORE.get(), ItemInit.RAW_SILVER_ITEM.get()));

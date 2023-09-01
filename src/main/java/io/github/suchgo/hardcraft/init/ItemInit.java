@@ -41,7 +41,7 @@ public class ItemInit {
     public static final RegistryObject<BlockItem> BUSH_STICKS_TRAPDOOR_ITEM = addToTab(ITEMS.register("bush_sticks_trapdoor", () -> new BlockItem(BlockInit.BUSH_STICKS_TRAPDOOR.get(), new Item.Properties())));
     public static final RegistryObject<BlockItem> BUSH_STICKS_PRESSURE_PLATE_ITEM = addToTab(ITEMS.register("bush_sticks_pressure_plate", () -> new BlockItem(BlockInit.BUSH_STICKS_PRESSURE_PLATE.get(), new Item.Properties())));
     public static final RegistryObject<BlockItem> BUSH_STICKS_BUTTON_ITEM = addToTab(ITEMS.register("bush_sticks_button", () -> new BlockItem(BlockInit.BUSH_STICKS_BUTTON.get(), new Item.Properties())));
-    public static final RegistryObject<BlockItem> BUSH_BLOCK_ITEM = addToTab(ITEMS.register("bush", () -> new BlockItem(BlockInit.BUSH_BLOCK.get(), new Item.Properties())));
+    public static final RegistryObject<BlockItem> WILD_BUSH_BLOCK_ITEM = addToTab(ITEMS.register("wild_bush", () -> new BlockItem(BlockInit.WILD_BUSH_BLOCK.get(), new Item.Properties())));
     public static final RegistryObject<BlockItem> SILVER_ORE_ITEM = addToTab(ITEMS.register("silver_ore", () -> new BlockItem(BlockInit.SILVER_ORE.get(), new Item.Properties())));
     public static final RegistryObject<BlockItem> DEEPSLATE_SILVER_ORE_ITEM = addToTab(ITEMS.register("deepslate_silver_ore", () -> new BlockItem(BlockInit.DEEPSLATE_SILVER_ORE.get(), new Item.Properties())));
     public static final RegistryObject<BlockItem> SOUND_BLOCK_ITEM = addToTab(ITEMS.register("sound_block", () -> new BlockItem(BlockInit.SOUND_BLOCK.get(), new Item.Properties())));

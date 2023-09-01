@@ -1,33 +1,33 @@
-[01сент.2023 02:12:34.078] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\Александр\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.1.46, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, hardcraft, --all, --output, C:\My Projects\HardCraft\src\generated\resources, --existing, C:\My Projects\HardCraft\src\main\resources]
-[01сент.2023 02:12:34.082] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.8 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
-[01сент.2023 02:12:34.192] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[01сент.2023 02:12:34.246] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/Александр/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[01сент.2023 02:12:34.516] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Александр\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.1.46\277ff7c640f0c8d702893a029a44ee29ef0e35b2\javafmllanguage-1.20.1-47.1.46.jar is missing mods.toml file
-[01сент.2023 02:12:34.518] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Александр\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.1.46\83f03e5e0a512e4d5d3bf75049acf7fa9fd2c685\lowcodelanguage-1.20.1-47.1.46.jar is missing mods.toml file
-[01сент.2023 02:12:34.521] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Александр\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.1.46\44aba90404009f73b7da0dbd6db9f5c3296351fe\mclanguage-1.20.1-47.1.46.jar is missing mods.toml file
-[01сент.2023 02:12:34.524] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Александр\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.1.46\564c0c5cf812168aaa92f968bc10a4572636d129\fmlcore-1.20.1-47.1.46.jar is missing mods.toml file
-[01сент.2023 02:12:34.592] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[01сент.2023 02:12:35.587] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\Александр\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, hardcraft, --all, --output, C:\My Projects\HardCraft\src\generated\resources, --existing, C:\My Projects\HardCraft\src\main\resources]
-[01сент.2023 02:12:35.921] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [hardcraft]
-[01сент.2023 02:12:39.380] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.1.46, for MC 1.20.1 with MCP 20230612.114412
-[01сент.2023 02:12:39.383] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.1.46 Initialized
-[01сент.2023 02:12:39.762] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Александр/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.1.46_mapped_official_1.20.1/forge-1.20.1-47.1.46_mapped_official_1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[01сент.2023 02:12:39.763] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Александр/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.1.46_mapped_official_1.20.1/forge-1.20.1-47.1.46_mapped_official_1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[01сент.2023 02:12:39.942] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[01сент.2023 02:12:39.993] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 50 ms
-[01сент.2023 02:12:39.993] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[01сент.2023 02:12:40.043] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 49 ms
-[01сент.2023 02:12:40.043] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Global Loot Modifiers : hardcraft
-[01сент.2023 02:12:40.060] [main/INFO] [net.minecraft.data.DataGenerator/]: Global Loot Modifiers : hardcraft finished after 16 ms
-[01сент.2023 02:12:40.060] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block Tags
-[01сент.2023 02:12:40.085] [main/INFO] [net.minecraft.data.DataGenerator/]: Block Tags finished after 25 ms
-[01сент.2023 02:12:40.085] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Tags
-[01сент.2023 02:12:40.087] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Tags finished after 1 ms
-[01сент.2023 02:12:40.087] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: hardcraft
-[01сент.2023 02:12:40.097] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: hardcraft finished after 10 ms
-[01сент.2023 02:12:40.097] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: hardcraft
-[01сент.2023 02:12:40.228] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: hardcraft finished after 130 ms
-[01сент.2023 02:12:40.228] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
-[01сент.2023 02:12:40.244] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 16 ms
-[01сент.2023 02:12:40.244] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 302 ms
-[01сент.2023 02:12:40.254] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 124, old count: 124, new count: 125, removed stale: 0, written: 1
+[02сент.2023 00:50:51.654] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\Александр\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.1.46, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, hardcraft, --all, --output, C:\My Projects\HardCraft\src\generated\resources, --existing, C:\My Projects\HardCraft\src\main\resources]
+[02сент.2023 00:50:51.671] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.8 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
+[02сент.2023 00:50:51.810] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[02сент.2023 00:50:51.864] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/Александр/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[02сент.2023 00:50:52.154] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Александр\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.1.46\277ff7c640f0c8d702893a029a44ee29ef0e35b2\javafmllanguage-1.20.1-47.1.46.jar is missing mods.toml file
+[02сент.2023 00:50:52.157] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Александр\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.1.46\83f03e5e0a512e4d5d3bf75049acf7fa9fd2c685\lowcodelanguage-1.20.1-47.1.46.jar is missing mods.toml file
+[02сент.2023 00:50:52.159] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Александр\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.1.46\44aba90404009f73b7da0dbd6db9f5c3296351fe\mclanguage-1.20.1-47.1.46.jar is missing mods.toml file
+[02сент.2023 00:50:52.162] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Александр\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.1.46\564c0c5cf812168aaa92f968bc10a4572636d129\fmlcore-1.20.1-47.1.46.jar is missing mods.toml file
+[02сент.2023 00:50:52.230] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[02сент.2023 00:50:53.369] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\Александр\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, hardcraft, --all, --output, C:\My Projects\HardCraft\src\generated\resources, --existing, C:\My Projects\HardCraft\src\main\resources]
+[02сент.2023 00:50:53.763] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [hardcraft]
+[02сент.2023 00:50:57.337] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.1.46, for MC 1.20.1 with MCP 20230612.114412
+[02сент.2023 00:50:57.339] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.1.46 Initialized
+[02сент.2023 00:50:57.728] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Александр/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.1.46_mapped_official_1.20.1/forge-1.20.1-47.1.46_mapped_official_1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[02сент.2023 00:50:57.729] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Александр/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.1.46_mapped_official_1.20.1/forge-1.20.1-47.1.46_mapped_official_1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[02сент.2023 00:50:57.957] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[02сент.2023 00:50:58.000] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 42 ms
+[02сент.2023 00:50:58.001] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[02сент.2023 00:50:58.047] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 45 ms
+[02сент.2023 00:50:58.047] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Global Loot Modifiers : hardcraft
+[02сент.2023 00:50:58.056] [main/INFO] [net.minecraft.data.DataGenerator/]: Global Loot Modifiers : hardcraft finished after 9 ms
+[02сент.2023 00:50:58.056] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block Tags
+[02сент.2023 00:50:58.066] [main/INFO] [net.minecraft.data.DataGenerator/]: Block Tags finished after 9 ms
+[02сент.2023 00:50:58.066] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Tags
+[02сент.2023 00:50:58.068] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Tags finished after 2 ms
+[02сент.2023 00:50:58.068] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: hardcraft
+[02сент.2023 00:50:58.082] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: hardcraft finished after 14 ms
+[02сент.2023 00:50:58.082] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: hardcraft
+[02сент.2023 00:50:58.230] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: hardcraft finished after 147 ms
+[02сент.2023 00:50:58.230] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
+[02сент.2023 00:50:58.253] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 22 ms
+[02сент.2023 00:50:58.253] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 296 ms
+[02сент.2023 00:50:58.265] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 124, old count: 124, new count: 125, removed stale: 0, written: 1

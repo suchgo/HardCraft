@@ -5,6 +5,7 @@ import io.github.suchgo.hardcraft.init.BlockInit;
 import io.github.suchgo.hardcraft.init.ItemInit;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
@@ -46,20 +47,25 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // Doors
         simpleBlockItem(BlockInit.BUSH_STICKS_DOOR);
+
+        // Plants
+        simpleBlockItemBasedOnBlockSprite(ItemInit.WILD_BUSH_BLOCK_ITEM);
     }
 
     private void simpleItem(RegistryObject<Item> item) {
-        this.item("item/generated", "layer0", item);
+        this.item("item/generated", "layer0", "item", item.getId().getPath());
     }
 
     private void simpleHandheldItem(RegistryObject<Item> item) {
-        this.item("item/handheld", "layer0", item);
+        this.item("item/handheld", "layer0", "item", item.getId().getPath());
     }
 
-    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
-        return withExistingParent(item.getId().getPath(),
-                new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(HardCraft.MODID,"item/" + item.getId().getPath()));
+    private void simpleBlockItem(RegistryObject<Block> item) {
+        this.item("item/generated", "layer0", "item", item.getId().getPath());
+    }
+
+    private void simpleBlockItemBasedOnBlockSprite(RegistryObject<BlockItem> item) {
+        this.item("item/generated", "layer0", "block", item.getId().getPath());
     }
 
     public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
@@ -74,10 +80,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         this.blockItem("wall", "block/wall_inventory", block, baseBlock);
     }
 
-    private ItemModelBuilder item(String resourceLocation, String key, RegistryObject<Item> item) {
-        return withExistingParent(item.getId().getPath(),
+    private void item(String resourceLocation, String key, String type, String path) {
+        this.withExistingParent(path,
                 new ResourceLocation(resourceLocation)).texture(key,
-                new ResourceLocation(HardCraft.MODID,"item/" + item.getId().getPath()));
+                new ResourceLocation(HardCraft.MODID,type + "/" + path));
     }
 
     private void blockItem(String key, String mcLocation, RegistryObject<Block> block, RegistryObject<Block> baseBlock) {

@@ -1,12 +1,14 @@
 package io.github.suchgo.hardcraft.init;
 
 import io.github.suchgo.hardcraft.block.SoundBlock;
+import io.github.suchgo.hardcraft.block.WildBushBlock;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -49,7 +51,7 @@ public class BlockInit {
     public static final RegistryObject<Block> BUSH_STICKS_BUTTON = BLOCKS.register("bush_sticks_button", () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON), BlockSetType.OAK, 30, true));
 
     // Plants
-    public static final RegistryObject<Block> BUSH_BLOCK = BLOCKS.register("bush", () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH).mapColor(MapColor.PLANT).noOcclusion()));
+    public static final RegistryObject<Block> WILD_BUSH_BLOCK = BLOCKS.register("wild_bush", () -> new WildBushBlock(BlockBehaviour.Properties.of().strength(0.5f).mapColor(MapColor.PLANT).replaceable().noCollission().sound(SoundType.GRASS).ignitedByLava().pushReaction(PushReaction.DESTROY)));
 
     // Ores
     public static final RegistryObject<Block> SILVER_ORE = BLOCKS.register("silver_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_ORE), UniformInt.of(1, 3)));

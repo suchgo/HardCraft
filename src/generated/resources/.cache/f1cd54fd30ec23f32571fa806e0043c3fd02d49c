@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-29T21:23:36.9361297	Item Models: hardcraft
+// 1.20.1	2023-09-01T21:58:55.2105483	Item Models: hardcraft
 4bde68a29841d2f4ca22c2484b03914da6963f12 assets/hardcraft/models/item/bandage.json
 c8bdbf1043ec9cc40c33d0333af6a88d1e0b71ef assets/hardcraft/models/item/bush_stick.json
 5474d7bea07a35a26f2fafecf8221601ed2684eb assets/hardcraft/models/item/bush_sticks_button.json
@@ -12,3 +12,4 @@ ffe8dc9b55b5d23ff7cf4c9d4dc4a02adb463de4 assets/hardcraft/models/item/metal_dete
 831547953b4113954baeef487e36cbbb6b5e058c assets/hardcraft/models/item/primitive_axe.json
 8a070cb5242128aa7dda103096df590e490ec6e6 assets/hardcraft/models/item/raw_silver.json
 85c930ba00fb3963f18e33b9304be33fefc0b169 assets/hardcraft/models/item/silver_ingot.json
+c0acbb8fe2fb06cc3b9521495ff5f3ba36f4a197 assets/hardcraft/models/item/wild_bush.json

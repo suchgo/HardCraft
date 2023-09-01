@@ -3,7 +3,6 @@ package io.github.suchgo.hardcraft.datagen;
 import io.github.suchgo.hardcraft.HardCraft;
 import io.github.suchgo.hardcraft.init.BlockInit;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -55,7 +54,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         buttonBlock((ButtonBlock) BlockInit.BUSH_STICKS_BUTTON.get(), blockTexture(BlockInit.BUSH_STICKS_BLOCK.get()));
 
         // Plants
-        simpleBlockWithItem(BlockInit.BUSH_BLOCK.get(), models().cross(BlockInit.BUSH_BLOCK.getId().getPath(), blockTexture(BlockInit.BUSH_BLOCK.get())));
+        simpleBlock(BlockInit.WILD_BUSH_BLOCK.get(), models().cross(BlockInit.WILD_BUSH_BLOCK.getId().getPath(), blockTexture(BlockInit.WILD_BUSH_BLOCK.get())).renderType("cutout"));
 
         // Ores
         blockWithItem(BlockInit.SILVER_ORE);
