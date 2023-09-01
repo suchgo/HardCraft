@@ -51,6 +51,8 @@ public class HardCraft
         LootModifiersInit.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so mob effects get registered
         EffectInit.MOB_EFFECTS.register(modEventBus);
+        // Register the Deferred Register to the mod event bus so mob effects get registered
+        ParticleInit.PARTICLE_TYPES.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -81,36 +83,6 @@ public class HardCraft
 
         LOGGER.info("Game rule 'naturalRegeneration' set to false");
         event.getServer().getWorldData().getGameRules().getRule(GameRules.RULE_NATURAL_REGENERATION).set(false, event.getServer());
-    }
-
-    // Make all Logs breakable only to axes
-    @SubscribeEvent
-    public void unbreakableWood(PlayerEvent.BreakSpeed event) {
-        if (event.getState().getTags().noneMatch(tagKey -> tagKey == BlockTags.LOGS)) {
-            return;
-        }
-
-        ItemStack itemStack = event.getEntity().getMainHandItem();
-        if (itemStack.isEmpty()) {
-            event.getEntity().hurt(event.getEntity().damageSources().cactus(), 1f);
-        }
-
-        if (!(itemStack.getItem() instanceof AxeItem)) {
-            event.setCanceled(true);
-        }
-    }
-
-    // Player take damage if he tries break cactus at empty hand
-    @SubscribeEvent
-    public void damageableCactus(PlayerEvent.BreakSpeed event) {
-        if (!event.getState().is(Blocks.CACTUS)) {
-            return;
-        }
-
-        ItemStack itemStack = event.getEntity().getMainHandItem();
-        if (itemStack.isEmpty()) {
-            event.getEntity().hurt(event.getEntity().damageSources().cactus(), 1f);
-        }
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
