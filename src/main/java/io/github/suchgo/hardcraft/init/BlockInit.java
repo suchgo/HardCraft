@@ -1,14 +1,17 @@
 package io.github.suchgo.hardcraft.init;
 
+import io.github.suchgo.hardcraft.block.RockBlock;
 import io.github.suchgo.hardcraft.block.SoundBlock;
 import io.github.suchgo.hardcraft.block.WildBushBlock;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -22,6 +25,7 @@ public class BlockInit {
     // Blocks
     public static final RegistryObject<Block> BUSH_STICKS_BLOCK = BLOCKS.register("bush_sticks_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).mapColor(MapColor.WOOD)));
     public static final RegistryObject<Block> SOUND_BLOCK = BLOCKS.register("sound_block", () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.NOTE_BLOCK)));
+    public static final RegistryObject<Block> ROCK_BLOCK = BLOCKS.register("rock", () -> new RockBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instabreak().noOcclusion()));
 
     // Stairs
     public static final RegistryObject<Block> BUSH_STICKS_STAIRS = BLOCKS.register("bush_sticks_stairs", () -> new StairBlock(() -> BUSH_STICKS_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));

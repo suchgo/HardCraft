@@ -50,6 +50,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // Plants
         simpleBlockItemBasedOnBlockSprite(ItemInit.WILD_BUSH_BLOCK_ITEM);
+
+        // Blocks
+        simpleBlockItem(BlockInit.ROCK_BLOCK);
     }
 
     private void simpleItem(RegistryObject<Item> item) {

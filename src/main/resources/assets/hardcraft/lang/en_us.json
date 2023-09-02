@@ -32,5 +32,6 @@
   "advancements.hardcraft.primitive_axe.title": "First tool",
   "advancements.hardcraft.primitive_axe.description": "Craft %s",
   "advancements.hardcraft.metal_detector.title": "Ore founder",
-  "advancements.hardcraft.metal_detector.description": "Craft %s"
+  "advancements.hardcraft.metal_detector.description": "Craft %s",
+  "block.hardcraft.rock": "Rock"
 }

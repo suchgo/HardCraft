@@ -32,5 +32,6 @@
   "advancements.hardcraft.primitive_axe.title": "Первый инструмент",
   "advancements.hardcraft.primitive_axe.description": "Создайте %s",
   "advancements.hardcraft.metal_detector.title": "Искатель руд",
-  "advancements.hardcraft.metal_detector.description": "Создайте %s"
+  "advancements.hardcraft.metal_detector.description": "Создайте %s",
+  "block.hardcraft.rock": "Камень"
 }

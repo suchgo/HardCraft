@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "hardcraft:bush_stick"
+    },
+    "G": {
+      "item": "hardcraft:grass_thread"
+    },
+    "R": {
+      "item": "hardcraft:rock"
+    }
+  },
+  "pattern": [
+    "RG",
+    "B "
+  ],
+  "result": {
+    "item": "hardcraft:primitive_axe"
+  },
+  "show_notification": true
+}

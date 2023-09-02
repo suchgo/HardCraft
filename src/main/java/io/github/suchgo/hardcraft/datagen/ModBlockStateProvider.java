@@ -20,6 +20,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         // Blocks
         blockWithItem(BlockInit.BUSH_STICKS_BLOCK);
         blockWithItem(BlockInit.SOUND_BLOCK);
+        simpleBlock(BlockInit.ROCK_BLOCK.get(), new ModelFile.UncheckedModelFile(modLoc("block/rock")));
 
         // Stairs
         stairsBlock((StairBlock) BlockInit.BUSH_STICKS_STAIRS.get(), blockTexture(BlockInit.BUSH_STICKS_BLOCK.get()));
@@ -54,7 +55,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         buttonBlock((ButtonBlock) BlockInit.BUSH_STICKS_BUTTON.get(), blockTexture(BlockInit.BUSH_STICKS_BLOCK.get()));
 
         // Plants
-        simpleBlock(BlockInit.WILD_BUSH_BLOCK.get(), models().cross(BlockInit.WILD_BUSH_BLOCK.getId().getPath(), blockTexture(BlockInit.WILD_BUSH_BLOCK.get())).renderType("cutout"));
+        simpleBlock(BlockInit.WILD_BUSH_BLOCK.get(), models().singleTexture(BlockInit.WILD_BUSH_BLOCK.getId().getPath(), mcLoc("block/tinted_cross"), "cross", blockTexture(BlockInit.WILD_BUSH_BLOCK.get())).renderType("cutout"));
 
         // Ores
         blockWithItem(BlockInit.SILVER_ORE);

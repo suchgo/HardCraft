@@ -30,16 +30,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(@NotNull Consumer<FinishedRecipe> pWriter) {
-        /*ShapedRecipeBuilder.shaped(RecipeCategory.MISC, BlockInit.BUSH_STICKS_BLOCK.get())
-                .pattern("BBB")
-                .pattern("BBB")
-                .pattern("BBB")
-                .define('B', ItemInit.BUSH_STICK_ITEM.get())
-                .unlockedBy("has_bush_stick", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ItemInit.BUSH_STICK_ITEM.get()).build()))
-                .save(pWriter);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemInit.BUSH_STICK_ITEM.get(), 9)
+        /*ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemInit.BUSH_STICK_ITEM.get(), 9)
                 .requires(BlockInit.BUSH_STICKS_BLOCK.get())
                 .unlockedBy("has_bush_sticks_block", inventoryTrigger(ItemPredicate.Builder.item().
                         of(BlockInit.BUSH_STICKS_BLOCK.get()).build()))
@@ -49,12 +40,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ItemInit.BUSH_STICK_ITEM.get(), RecipeCategory.MISC, BlockInit.BUSH_STICKS_BLOCK.get(),
                 HardCraft.MODID + ":bush_stick", "bush_stick",HardCraft.MODID + ":bush_sticks_block", "bush_sticks_block");
 
+        // Tools
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ItemInit.PRIMITIVE_AXE.get())
+                .pattern("RG")
+                .pattern("B ")
+                .define('R', ItemInit.ROCK_BLOCK_ITEM.get())
+                .define('G', ItemInit.GRASS_THREAD_ITEM.get())
+                .define('B', ItemInit.BUSH_STICK_ITEM.get())
+                .unlockedBy("has_bush_stick_or_has_rock_or_has_grass_thread", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ItemInit.BUSH_STICK_ITEM.get(), ItemInit.ROCK_BLOCK_ITEM.get(), ItemInit.GRASS_THREAD_ITEM.get()).build()))
+                .save(pWriter);
+
         // Stairs
         stairBuilder(ItemInit.BUSH_STICKS_STAIRS_ITEM.get(), Ingredient.of(ItemInit.BUSH_STICKS_BLOCK_ITEM.get())).unlockedBy("has_bush_sticks_block", has(ItemInit.BUSH_STICKS_BLOCK_ITEM.get())).save(pWriter);
 
         // Slabs
         slabBuilder(RecipeCategory.BUILDING_BLOCKS, ItemInit.BUSH_STICKS_SLAB_ITEM.get(), Ingredient.of(ItemInit.BUSH_STICKS_BLOCK_ITEM.get())).unlockedBy("has_bush_sticks_block", has(ItemInit.BUSH_STICKS_BLOCK_ITEM.get())).save(pWriter);
-
 
         // Smelting/Blasting
         oreSmelting(pWriter, SILVER_SMELTABLES, RecipeCategory.MISC, ItemInit.SILVER_INGOT_ITEM.get(), 0.25f, 200, "silver");

@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bush_stick_or_has_rock_or_has_grass_thread": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "hardcraft:bush_stick",
+              "hardcraft:rock",
+              "hardcraft:grass_thread"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "hardcraft:primitive_axe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_bush_stick_or_has_rock_or_has_grass_thread",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "hardcraft:primitive_axe"
+    ]
+  },
+  "sends_telemetry_event": false
+}

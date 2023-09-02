@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.Mod;
 public class ModEvents {
     // Make all Logs breakable only to axes
     @SubscribeEvent
-    public void unbreakableWood(PlayerEvent.BreakSpeed event) {
+    public static void unbreakableWood(PlayerEvent.BreakSpeed event) {
         if (event.getState().getTags().noneMatch(tagKey -> tagKey == BlockTags.LOGS)) {
             return;
         }
@@ -30,7 +30,7 @@ public class ModEvents {
 
     // Player take damage if he tries break cactus at empty hand
     @SubscribeEvent
-    public void damageableCactus(PlayerEvent.BreakSpeed event) {
+    public static void damageableCactus(PlayerEvent.BreakSpeed event) {
         if (!event.getState().is(Blocks.CACTUS)) {
             return;
         }
