@@ -51,7 +51,7 @@ public class BlockInit {
     public static final RegistryObject<Block> BUSH_STICKS_BUTTON = BLOCKS.register("bush_sticks_button", () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON), BlockSetType.OAK, 30, true));
 
     // Plants
-    public static final RegistryObject<Block> WILD_BUSH_BLOCK = BLOCKS.register("wild_bush", () -> new WildBushBlock(BlockBehaviour.Properties.of().strength(0.5f).mapColor(MapColor.PLANT).replaceable().noCollission().sound(SoundType.GRASS).ignitedByLava().pushReaction(PushReaction.DESTROY)));
+    public static final RegistryObject<Block> WILD_BUSH_BLOCK = BLOCKS.register("wild_bush", () -> new WildBushBlock(BlockBehaviour.Properties.of().strength(0.2f).mapColor(MapColor.PLANT).replaceable().noCollission().sound(SoundType.GRASS).ignitedByLava().pushReaction(PushReaction.DESTROY)));
 
     // Ores
     public static final RegistryObject<Block> SILVER_ORE = BLOCKS.register("silver_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_ORE), UniformInt.of(1, 3)));

@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "features": "hardcraft:patch_wild_bush_plains",
+  "biomes": "#minecraft:is_plains",
+  "step": "vegetal_decoration"
+}

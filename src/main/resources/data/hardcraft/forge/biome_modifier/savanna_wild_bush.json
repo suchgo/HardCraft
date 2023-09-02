@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "features": "hardcraft:patch_wild_bush_savanna",
+  "biomes": "#minecraft:is_savanna",
+  "step": "vegetal_decoration"
+}

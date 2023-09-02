@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "features": "hardcraft:patch_wild_bush_jungle",
+  "biomes": "#minecraft:is_jungle",
+  "step": "vegetal_decoration"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "features": "hardcraft:patch_wild_bush_forest",
+  "biomes": "#minecraft:is_forest",
+  "step": "vegetal_decoration"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "features": "hardcraft:patch_wild_bush_taiga",
+  "biomes": "#minecraft:is_taiga",
+  "step": "vegetal_decoration"
+}
