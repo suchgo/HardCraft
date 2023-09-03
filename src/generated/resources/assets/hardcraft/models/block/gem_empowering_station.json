@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "hardcraft:block/gem_empowering_station_front",
+    "side": "hardcraft:block/gem_empowering_station_side",
+    "top": "hardcraft:block/gem_empowering_station_top"
+  }
+}

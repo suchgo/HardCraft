@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "features": "hardcraft:patch_wild_bush_badlands",
-  "biomes": "#minecraft:is_badlands",
-  "step": "vegetal_decoration"
-}

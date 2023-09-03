@@ -21,6 +21,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(BlockInit.BUSH_STICKS_BLOCK);
         blockWithItem(BlockInit.SOUND_BLOCK);
         simpleBlock(BlockInit.ROCK_BLOCK.get(), new ModelFile.UncheckedModelFile(modLoc("block/rock")));
+        horizontalBlock(BlockInit.GEM_EMPOWERING_STATION_BLOCK.get(), modLoc("block/gem_empowering_station_side"), modLoc("block/gem_empowering_station_front"), modLoc("block/gem_empowering_station_top"));
+        blockItem(BlockInit.GEM_EMPOWERING_STATION_BLOCK);
 
         // Stairs
         stairsBlock((StairBlock) BlockInit.BUSH_STICKS_STAIRS.get(), blockTexture(BlockInit.BUSH_STICKS_BLOCK.get()));

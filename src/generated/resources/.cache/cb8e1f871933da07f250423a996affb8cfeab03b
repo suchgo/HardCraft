@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-02T20:01:09.2806348	Block States: hardcraft
+// 1.20.1	2023-09-03T23:54:09.9114736	Block States: hardcraft
 bacd10c0ccfe123c31eda6940054b6fc525a5476 assets/hardcraft/blockstates/bush_sticks_block.json
 0dbbf1345b77d8a01bc6fdcd27154f7c3a1b1ee0 assets/hardcraft/blockstates/bush_sticks_button.json
 932944a4501acfd655f642ee09bb6cfb747d7d76 assets/hardcraft/blockstates/bush_sticks_door.json
@@ -10,6 +10,7 @@ bdd496dba14fac50736cf74970c854ddf88619f0 assets/hardcraft/blockstates/bush_stick
 c524b8c61c7340de9639bcb68a1aaba843d5b966 assets/hardcraft/blockstates/bush_sticks_trapdoor.json
 1c27b0b3191ed4bd7044bea0c73422189630c6d5 assets/hardcraft/blockstates/bush_sticks_wall.json
 68c14522e5e3174705dfbeae3ca4ea1a453223b7 assets/hardcraft/blockstates/deepslate_silver_ore.json
+cc695938190a12198a883dac3763d2d7fa9eb8b4 assets/hardcraft/blockstates/gem_empowering_station.json
 e91882753a025ee1ff78e8161f3d44ea306b8e2f assets/hardcraft/blockstates/rock.json
 b2cb0bf0339a51087863eff65fb0025809759505 assets/hardcraft/blockstates/silver_ore.json
 48c0eaabfb5ce89c33b107acd179b372a8713ac7 assets/hardcraft/blockstates/sound_block.json
@@ -45,6 +46,7 @@ a7a548be78d7f6d937ffbc7f432c10ba76f79e61 assets/hardcraft/models/block/bush_stic
 d968029d1af34d606cf6c73c96f04a0e0f6fac4e assets/hardcraft/models/block/bush_sticks_wall_side.json
 dfa3610161543ffd762ba4c278616a1102d37566 assets/hardcraft/models/block/bush_sticks_wall_side_tall.json
 fa2992f85fc296e30b78781f6cfb6ca78ac2eef7 assets/hardcraft/models/block/deepslate_silver_ore.json
+6d8da77155b5327134593f5e95af8f2274721e42 assets/hardcraft/models/block/gem_empowering_station.json
 7792cbb4f726ee1759cbe541a4d410323ca7f10f assets/hardcraft/models/block/silver_ore.json
 63bdebc8eb314193f731600598e565db6a502743 assets/hardcraft/models/block/sound_block.json
 49d08b3af96a325d9ab82736a447e2c3f53baee2 assets/hardcraft/models/block/wild_bush.json
@@ -55,5 +57,6 @@ fa2992f85fc296e30b78781f6cfb6ca78ac2eef7 assets/hardcraft/models/block/deepslate
 e0d9ae3c91c479e4e9250c0a1fe1b58dbe203e82 assets/hardcraft/models/item/bush_sticks_stairs.json
 2aaae7b5438ef113473b170a9ed2a8dcd87cb3e2 assets/hardcraft/models/item/bush_sticks_trapdoor.json
 ae4f693e03ffdc13e0c0d39b29a7de7df5b70be8 assets/hardcraft/models/item/deepslate_silver_ore.json
+cdbfb78a97e828fae87f1e6708f5293db6d2fef6 assets/hardcraft/models/item/gem_empowering_station.json
 13cf39f031e66c40ae4adb0aa788178f52af8f12 assets/hardcraft/models/item/silver_ore.json
 5fe03ef80920d75647e95e71fe565f4ceb30bcc4 assets/hardcraft/models/item/sound_block.json

@@ -2,7 +2,9 @@ package io.github.suchgo.hardcraft;
 
 import com.mojang.logging.LogUtils;
 import io.github.suchgo.hardcraft.init.*;
+import io.github.suchgo.hardcraft.screen.GemEmpoweringStationScreen;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
@@ -39,20 +41,16 @@ public class HardCraft
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        // Register the Deferred Register to the mod event bus so blocks get registered
+        // Register the Deferred Registers
         BlockInit.BLOCKS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so items get registered
         ItemInit.ITEMS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so tabs get registered
         CreativeTabInit.CREATIVE_MODE_TABS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so sounds get registered
         SoundInit.SOUND_EVENTS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so loot modifiers get registered
         LootModifiersInit.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so mob effects get registered
         EffectInit.MOB_EFFECTS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so mob effects get registered
         ParticleInit.PARTICLE_TYPES.register(modEventBus);
+        BlockEntityInit.BLOCK_ENTITIES.register(modEventBus);
+        MenuTypeInit.MENUS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -95,6 +93,8 @@ public class HardCraft
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+
+            MenuScreens.register(MenuTypeInit.GEM_EMPOWERING_MENU.get(), GemEmpoweringStationScreen::new);
         }
     }
 }

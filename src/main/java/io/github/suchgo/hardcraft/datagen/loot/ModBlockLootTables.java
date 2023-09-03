@@ -5,9 +5,7 @@ import io.github.suchgo.hardcraft.init.ItemInit;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.storage.loot.IntRange;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
-import net.minecraft.world.level.storage.loot.providers.number.NumberProviders;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
@@ -25,6 +23,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(BlockInit.SOUND_BLOCK.get());
         this.add(BlockInit.BUSH_STICKS_BLOCK.get(), createSingleItemTable(ItemInit.BUSH_STICK_ITEM.get(), ConstantValue.exactly(9f)));
         this.dropSelf(BlockInit.ROCK_BLOCK.get());
+        this.dropSelf(BlockInit.GEM_EMPOWERING_STATION_BLOCK.get());
 
         // Stairs
         this.dropSelf(BlockInit.BUSH_STICKS_STAIRS.get());
