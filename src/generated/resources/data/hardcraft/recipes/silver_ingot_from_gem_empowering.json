@@ -1,0 +1,12 @@
+{
+  "type": "hardcraft:gem_empowering",
+  "ingredients": [
+    {
+      "item": "hardcraft:raw_silver"
+    }
+  ],
+  "output": {
+    "count": 3,
+    "item": "hardcraft:silver_ingot"
+  }
+}

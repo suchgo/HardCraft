@@ -1,6 +1,7 @@
 package io.github.suchgo.hardcraft.datagen;
 
 import io.github.suchgo.hardcraft.HardCraft;
+import io.github.suchgo.hardcraft.datagen.custom.GemEmpoweringRecipeBuilder;
 import io.github.suchgo.hardcraft.init.BlockInit;
 import io.github.suchgo.hardcraft.init.ItemInit;
 import net.minecraft.advancements.critereon.ItemPredicate;
@@ -62,6 +63,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(pWriter, SILVER_SMELTABLES, RecipeCategory.MISC, ItemInit.SILVER_INGOT_ITEM.get(), 0.25f, 100, "silver");
 
         // Cooking
+
+        // Empowering
+        new GemEmpoweringRecipeBuilder(ItemInit.RAW_SILVER_ITEM.get(), ItemInit.SILVER_INGOT_ITEM.get(), 3)
+                .unlockedBy("has_raw_silver", has(ItemInit.RAW_SILVER_ITEM.get())).save(pWriter);
     }
 
     protected static void oreSmelting(@NotNull Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult,
