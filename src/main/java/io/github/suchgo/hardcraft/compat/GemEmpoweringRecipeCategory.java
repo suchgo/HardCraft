@@ -6,11 +6,15 @@ import io.github.suchgo.hardcraft.recipe.GemEmpoweringRecipe;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.drawable.IDrawableAnimated;
+import mezz.jei.api.gui.drawable.IDrawableStatic;
+import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
@@ -25,9 +29,13 @@ public class GemEmpoweringRecipeCategory implements IRecipeCategory<GemEmpowerin
     private final IDrawable background;
     private final IDrawable icon;
 
+    private final IDrawableAnimated animatedArrow;
+
     public GemEmpoweringRecipeCategory(IGuiHelper helper) {
-        this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 85);
+        this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 75);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(BlockInit.GEM_EMPOWERING_STATION_BLOCK.get()));
+        IDrawableStatic staticArrow = helper.createDrawable(TEXTURE, 176, 0, 8, 14);
+        this.animatedArrow = helper.createAnimatedDrawable(staticArrow, 100, IDrawableAnimated.StartDirection.TOP, false);
     }
 
     @Override
@@ -54,5 +62,10 @@ public class GemEmpoweringRecipeCategory implements IRecipeCategory<GemEmpowerin
     public void setRecipe(IRecipeLayoutBuilder builder, GemEmpoweringRecipe recipe, @NotNull IFocusGroup focuses) {
         builder.addSlot(RecipeIngredientRole.INPUT, 80, 17).addIngredients(recipe.getIngredients().get(0));
         builder.addSlot(RecipeIngredientRole.OUTPUT, 80, 53).addItemStack(recipe.getResultItem(null));
+    }
+
+    @Override
+    public void draw(@NotNull GemEmpoweringRecipe recipe, @NotNull IRecipeSlotsView recipeSlotsView, @NotNull GuiGraphics guiGraphics, double mouseX, double mouseY) {
+        animatedArrow.draw(guiGraphics, 85, 36);
     }
 }

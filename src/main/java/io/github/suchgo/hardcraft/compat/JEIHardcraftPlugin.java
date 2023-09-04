@@ -37,6 +37,6 @@ public class JEIHardcraftPlugin implements IModPlugin  {
 
     @Override
     public void registerGuiHandlers(IGuiHandlerRegistration registration) {
-        registration.addRecipeClickArea(GemEmpoweringStationScreen.class, 60, 30, 20, 30, GemEmpoweringRecipeCategory.GEM_EMPOWERING_TYPE);
+        registration.addRecipeClickArea(GemEmpoweringStationScreen.class, 79, 34, 18, 18, GemEmpoweringRecipeCategory.GEM_EMPOWERING_TYPE);
     }
 }
