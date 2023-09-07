@@ -54,6 +54,9 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Menu
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
+            if(!Objects.requireNonNull(getLevel()).isClientSide()) {
+                getLevel().sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
+            }
         }
 
         @Override
@@ -100,6 +103,16 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Menu
                 return true;
             }
         };
+    }
+
+    public ItemStack getRenderStack() {
+        ItemStack stack = itemHandler.getStackInSlot(OUTPUT_SLOT);
+
+        if(stack.isEmpty()) {
+            stack = itemHandler.getStackInSlot(INPUT_SLOT);
+        }
+
+        return stack;
     }
 
     public GemEmpoweringStationBlockEntity(BlockPos pPos, BlockState pBlockState) {

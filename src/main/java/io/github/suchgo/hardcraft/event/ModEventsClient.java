@@ -1,6 +1,8 @@
 package io.github.suchgo.hardcraft.event;
 
 import io.github.suchgo.hardcraft.HardCraft;
+import io.github.suchgo.hardcraft.block.entity.renderer.GemEmpoweringBlockEntityRenderer;
+import io.github.suchgo.hardcraft.init.BlockEntityInit;
 import io.github.suchgo.hardcraft.init.BlockInit;
 import io.github.suchgo.hardcraft.init.ParticleInit;
 import io.github.suchgo.hardcraft.particle.BloodParticles;
@@ -9,6 +11,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.FoliageColor;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -34,5 +37,10 @@ public class ModEventsClient {
             return event.getBlockColors().getColor(state, null, null, pTintIndex);
         },
                 BlockInit.WILD_BUSH_BLOCK.get());
+    }
+
+    @SubscribeEvent
+    public static void registerBlockEntityRenderer(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerBlockEntityRenderer(BlockEntityInit.GEM_EMPOWERING_STATION_BE.get(), GemEmpoweringBlockEntityRenderer::new);
     }
 }
