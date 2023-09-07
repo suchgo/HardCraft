@@ -7,7 +7,6 @@ import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.gui.drawable.IDrawableAnimated;
-import mezz.jei.api.gui.drawable.IDrawableStatic;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
@@ -34,8 +33,7 @@ public class GemEmpoweringRecipeCategory implements IRecipeCategory<GemEmpowerin
     public GemEmpoweringRecipeCategory(IGuiHelper helper) {
         this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 75);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(BlockInit.GEM_EMPOWERING_STATION_BLOCK.get()));
-        IDrawableStatic staticArrow = helper.createDrawable(TEXTURE, 176, 0, 8, 14);
-        this.animatedArrow = helper.createAnimatedDrawable(staticArrow, 100, IDrawableAnimated.StartDirection.TOP, false);
+        this.animatedArrow = helper.createAnimatedDrawable(helper.createDrawable(TEXTURE, 176, 0, 8, 14), 100, IDrawableAnimated.StartDirection.TOP, false);
     }
 
     @Override

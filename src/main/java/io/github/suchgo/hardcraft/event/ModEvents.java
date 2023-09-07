@@ -3,7 +3,7 @@ package io.github.suchgo.hardcraft.event;
 import com.mojang.logging.LogUtils;
 import io.github.suchgo.hardcraft.HardCraft;
 import io.github.suchgo.hardcraft.init.EffectInit;
-import io.github.suchgo.hardcraft.utils.Utils;
+import io.github.suchgo.hardcraft.util.Utils;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.damagesource.DamageSource;
@@ -22,7 +22,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.slf4j.Logger;
 
-import java.util.LinkedList;
 import java.util.stream.Stream;
 
 @Mod.EventBusSubscriber(modid = HardCraft.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
