@@ -34,5 +34,7 @@
   "advancements.hardcraft.metal_detector.title": "Искатель руд",
   "advancements.hardcraft.metal_detector.description": "Создайте %s",
   "block.hardcraft.rock": "Камень",
-  "block.hardcraft.gem_empowering_station": "Станция зарядки кристалов"
+  "block.hardcraft.gem_empowering_station": "Станция зарядки кристалов",
+  "tooltip.hardcraft.liquid.amount.with.capacity": "%s / %s mB",
+  "tooltip.hardcraft.liquid.amount": "%s mB"
 }

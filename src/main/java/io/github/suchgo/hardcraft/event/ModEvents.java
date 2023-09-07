@@ -1,9 +1,8 @@
 package io.github.suchgo.hardcraft.event;
 
-import com.mojang.logging.LogUtils;
 import io.github.suchgo.hardcraft.HardCraft;
 import io.github.suchgo.hardcraft.init.EffectInit;
-import io.github.suchgo.hardcraft.util.Utils;
+import io.github.suchgo.hardcraft.util.BasicUtil;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.damagesource.DamageSource;
@@ -20,14 +19,11 @@ import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import org.slf4j.Logger;
 
 import java.util.stream.Stream;
 
 @Mod.EventBusSubscriber(modid = HardCraft.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModEvents {
-    private static final Logger LOGGER = LogUtils.getLogger();
-
     // Make all Logs breakable only to axes
     @SubscribeEvent
     public static void unbreakableWood(PlayerEvent.BreakSpeed event) {
@@ -79,7 +75,7 @@ public class ModEvents {
             return;
         }
 
-        if (Utils.randomChance(15)) {
+        if (BasicUtil.randomChance(15)) {
             event.getEntity().addEffect(new MobEffectInstance(EffectInit.BLEEDING_EFFECT.get(), 220));
         }
     }
