@@ -48,6 +48,7 @@ public class HardCraft
         BlockEntityInit.BLOCK_ENTITIES.register(modEventBus);
         MenuTypeInit.MENUS.register(modEventBus);
         RecipeInit.SERIALIZERS.register(modEventBus);
+        DamageTypeInit.DAMAGE_TYPES.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

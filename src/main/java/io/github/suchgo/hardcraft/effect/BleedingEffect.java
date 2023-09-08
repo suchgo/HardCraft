@@ -1,7 +1,12 @@
 package io.github.suchgo.hardcraft.effect;
 
+import io.github.suchgo.hardcraft.HardCraft;
+import io.github.suchgo.hardcraft.init.DamageSourceInit;
+import io.github.suchgo.hardcraft.init.DamageTypeInit;
 import io.github.suchgo.hardcraft.init.ParticleInit;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
@@ -14,9 +19,8 @@ public class BleedingEffect extends MobEffect {
 
     @Override
     public void applyEffectTick(@NotNull LivingEntity pLivingEntity, int pAmplifier) {
-        pLivingEntity.hurt(pLivingEntity.damageSources().cactus(), 1f);
-
         if (!pLivingEntity.level().isClientSide()) {
+            pLivingEntity.hurt(DamageSourceInit.bleeding(pLivingEntity.level()), 1f);
             spawnParticles(pLivingEntity);
         }
 

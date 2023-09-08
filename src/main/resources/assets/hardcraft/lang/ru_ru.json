@@ -36,5 +36,7 @@
   "block.hardcraft.rock": "Камень",
   "block.hardcraft.gem_empowering_station": "Станция зарядки кристалов",
   "tooltip.hardcraft.liquid.amount.with.capacity": "%s / %s mB",
-  "tooltip.hardcraft.liquid.amount": "%s mB"
+  "tooltip.hardcraft.liquid.amount": "%s mB",
+  "death.attack.bleeding": "%1$s истёк кровью",
+  "death.attack.bleeding.player": "%1$s истёк кровью от %2$s"
 }

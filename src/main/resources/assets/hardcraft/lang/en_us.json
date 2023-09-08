@@ -36,5 +36,7 @@
   "block.hardcraft.rock": "Rock",
   "block.hardcraft.gem_empowering_station": "Gem empowering station",
   "tooltip.hardcraft.liquid.amount.with.capacity": "%s / %s mB",
-  "tooltip.hardcraft.liquid.amount": "%s mB"
+  "tooltip.hardcraft.liquid.amount": "%s mB",
+  "death.attack.bleeding": "%1$s bled to death",
+  "death.attack.bleeding.player": "%1$s bled from %2$s"
 }
