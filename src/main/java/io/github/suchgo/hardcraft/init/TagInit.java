@@ -1,11 +1,13 @@
 package io.github.suchgo.hardcraft.init;
 
 import io.github.suchgo.hardcraft.HardCraft;
-import net.minecraft.data.tags.TagsProvider;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
@@ -34,6 +36,23 @@ public class TagInit {
 
         private static TagKey<Block> forgeTag(String name) {
             return BlockTags.create(new ResourceLocation("forge", name));
+        }
+    }
+
+    public static class DamageTypes {
+        public static final TagKey<DamageType> IS_BLEEDING = forgeTag("is_bleeding");
+        public static final TagKey<DamageType> IS_INJURY = tag("is_injury");
+
+        private static TagKey<DamageType> tag(String name) {
+            return create(new ResourceLocation(HardCraft.MODID, name));
+        }
+
+        private static TagKey<DamageType> forgeTag(String name) {
+            return create(new ResourceLocation("forge", name));
+        }
+
+        private static TagKey<DamageType> create(ResourceLocation name) {
+            return TagKey.create(Registries.DAMAGE_TYPE, name);
         }
     }
 }

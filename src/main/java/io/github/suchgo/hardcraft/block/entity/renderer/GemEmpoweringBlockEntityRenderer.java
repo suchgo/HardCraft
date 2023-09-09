@@ -36,8 +36,7 @@ public class GemEmpoweringBlockEntityRenderer implements BlockEntityRenderer<Gem
         pPoseStack.mulPose(Axis.YP.rotationDegrees(pBlockEntity.getBlockState().getValue(GemEmpoweringStationBlock.FACING).toYRot()));
         //pPoseStack.mulPose(Axis.XP.rotationDegrees(270));
 
-        itemRenderer.renderStatic(itemStack, ItemDisplayContext.FIXED, getLightLevel(Objects.requireNonNull(pBlockEntity.getLevel()),
-                pBlockEntity.getBlockPos()), OverlayTexture.NO_OVERLAY, pPoseStack, pBufferSource, pBlockEntity.getLevel(), 1);
+        itemRenderer.renderStatic(itemStack, ItemDisplayContext.FIXED, getLightLevel(Objects.requireNonNull(pBlockEntity.getLevel()), pBlockEntity.getBlockPos()), OverlayTexture.NO_OVERLAY, pPoseStack, pBufferSource, pBlockEntity.getLevel(), 1);
         pPoseStack.popPose();
     }
 

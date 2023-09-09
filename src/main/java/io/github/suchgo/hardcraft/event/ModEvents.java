@@ -1,6 +1,7 @@
 package io.github.suchgo.hardcraft.event;
 
 import io.github.suchgo.hardcraft.HardCraft;
+import io.github.suchgo.hardcraft.init.DamageSourceInit;
 import io.github.suchgo.hardcraft.init.EffectInit;
 import io.github.suchgo.hardcraft.util.BasicUtil;
 import net.minecraft.tags.BlockTags;
@@ -33,7 +34,7 @@ public class ModEvents {
 
         ItemStack itemStack = event.getEntity().getMainHandItem();
         if (itemStack.isEmpty()) {
-            event.getEntity().hurt(event.getEntity().damageSources().cactus(), 1f);
+            event.getEntity().hurt(DamageSourceInit.injury(event.getEntity().level()), 1f);
         }
 
         if (!(itemStack.getItem() instanceof AxeItem)) {

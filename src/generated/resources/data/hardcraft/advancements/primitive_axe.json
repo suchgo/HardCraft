@@ -16,7 +16,6 @@
   },
   "display": {
     "announce_to_chat": true,
-    "background": "hardcraft:textures/block/silver_ore.png",
     "description": {
       "translate": "advancements.hardcraft.primitive_axe.description",
       "with": [

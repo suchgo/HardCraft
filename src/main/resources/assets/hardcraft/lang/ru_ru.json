@@ -38,5 +38,6 @@
   "tooltip.hardcraft.liquid.amount.with.capacity": "%s / %s mB",
   "tooltip.hardcraft.liquid.amount": "%s mB",
   "death.attack.bleeding": "%1$s истёк кровью",
-  "death.attack.bleeding.player": "%1$s истёк кровью от %2$s"
+  "death.attack.bleeding.player": "%1$s истёк кровью от %2$s",
+  "death.attack.injury": "%1$s нанёс себе смертельную травму"
 }

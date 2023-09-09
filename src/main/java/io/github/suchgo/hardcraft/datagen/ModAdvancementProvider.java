@@ -1,15 +1,19 @@
 package io.github.suchgo.hardcraft.datagen;
 
 import io.github.suchgo.hardcraft.HardCraft;
+import io.github.suchgo.hardcraft.init.DamageTypeInit;
 import io.github.suchgo.hardcraft.init.ItemInit;
+import io.github.suchgo.hardcraft.init.TagInit;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.DisplayInfo;
 import net.minecraft.advancements.FrameType;
-import net.minecraft.advancements.critereon.InventoryChangeTrigger;
+import net.minecraft.advancements.critereon.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.common.data.ForgeAdvancementProvider;
 import org.jetbrains.annotations.NotNull;
@@ -29,18 +33,14 @@ public class ModAdvancementProvider implements ForgeAdvancementProvider.Advancem
 
         Advancement primitiveAxe = Advancement.Builder.advancement()
                 .display(new DisplayInfo(new ItemStack(ItemInit.PRIMITIVE_AXE.get()),
-                        Component.translatable("advancements.hardcraft.primitive_axe.title"), Component.translatable("advancements.hardcraft.primitive_axe.description", ItemInit.PRIMITIVE_AXE.get().getDescription()),
-                        new ResourceLocation(HardCraft.MODID, "textures/block/silver_ore.png"), FrameType.TASK,
-                        true, true, false))
+                        Component.translatable("advancements.hardcraft.primitive_axe.title"), Component.translatable("advancements.hardcraft.primitive_axe.description", ItemInit.PRIMITIVE_AXE.get().getDescription()), null, FrameType.TASK, true, true, false))
                 .parent(rootAdvancement)
                 .addCriterion("has_primitive_axe", InventoryChangeTrigger.TriggerInstance.hasItems(ItemInit.PRIMITIVE_AXE.get()))
                 .save(saver, new ResourceLocation(HardCraft.MODID, "primitive_axe"), existingFileHelper);
 
         Advancement metalDetector = Advancement.Builder.advancement()
                 .display(new DisplayInfo(new ItemStack(ItemInit.METAL_DETECTOR_ITEM.get()),
-                        Component.translatable("advancements.hardcraft.metal_detector.title"), Component.translatable("advancements.hardcraft.metal_detector.description", ItemInit.METAL_DETECTOR_ITEM.get().getDescription()),
-                        null, FrameType.TASK,
-                        true, true, false))
+                        Component.translatable("advancements.hardcraft.metal_detector.title"), Component.translatable("advancements.hardcraft.metal_detector.description", ItemInit.METAL_DETECTOR_ITEM.get().getDescription()), null, FrameType.TASK, true, true, false))
                 .parent(primitiveAxe)
                 .addCriterion("has_metal_detector", InventoryChangeTrigger.TriggerInstance.hasItems(ItemInit.METAL_DETECTOR_ITEM.get()))
                 .save(saver, new ResourceLocation(HardCraft.MODID, "metal_detector"), existingFileHelper);
