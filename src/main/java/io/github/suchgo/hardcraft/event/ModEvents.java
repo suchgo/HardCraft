@@ -21,24 +21,30 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+import java.util.List;
 import java.util.stream.Stream;
 
 @Mod.EventBusSubscriber(modid = HardCraft.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModEvents {
-    // Make all Logs breakable only to axes
+    // Make all wood like block droppable only to axes
     @SubscribeEvent
-    public static void unbreakableWood(PlayerEvent.BreakSpeed event) {
-        if (event.getState().getTags().noneMatch(tagKey -> tagKey == BlockTags.LOGS)) {
+    public static void woodLikeBlockRequireTool(PlayerEvent.HarvestCheck event) {
+        if (event.getTargetBlock().getTags().noneMatch(tagKey -> List.of(
+                BlockTags.LOGS,
+                BlockTags.PLANKS,
+                BlockTags.WOODEN_SLABS,
+                BlockTags.WOODEN_STAIRS
+        ).contains(tagKey))) {
             return;
         }
 
         ItemStack itemStack = event.getEntity().getMainHandItem();
-        if (itemStack.isEmpty()) {
+        if (itemStack.isEmpty() && BasicUtil.randomChance(5)) {
             event.getEntity().hurt(DamageSourceInit.injury(event.getEntity().level()), 1f);
         }
 
         if (!(itemStack.getItem() instanceof AxeItem)) {
-            event.setCanceled(true);
+            event.setCanHarvest(false);
         }
     }
 

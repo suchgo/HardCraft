@@ -39,6 +39,7 @@ public class HardCraft
 
         // Register the Deferred Registers
         BlockInit.BLOCKS.register(modEventBus);
+        VanillaBlockInit.BLOCKS.register(modEventBus);
         ItemInit.ITEMS.register(modEventBus);
         CreativeTabInit.CREATIVE_MODE_TABS.register(modEventBus);
         SoundInit.SOUND_EVENTS.register(modEventBus);

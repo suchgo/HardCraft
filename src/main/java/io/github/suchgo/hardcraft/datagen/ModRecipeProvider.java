@@ -12,6 +12,7 @@ import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import org.jetbrains.annotations.NotNull;
 
@@ -67,6 +68,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         // Empowering
         new GemEmpoweringRecipeBuilder(ItemInit.RAW_SILVER_ITEM.get(), ItemInit.SILVER_INGOT_ITEM.get(), 3)
                 .unlockedBy("has_raw_silver", has(ItemInit.RAW_SILVER_ITEM.get())).save(pWriter);
+
+        // Override vanilla
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.CRAFTING_TABLE)
+                .pattern("BB")
+                .define('B', BlockInit.BUSH_STICKS_BLOCK.get())
+                .unlockedBy("has_bush_sticks_block", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(BlockInit.BUSH_STICKS_BLOCK.get()).build()))
+                .save(pWriter);
     }
 
     protected static void oreSmelting(@NotNull Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult,

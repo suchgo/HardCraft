@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-09T14:09:42.5031986	Recipes
+// 1.20.1	2023-09-09T15:45:58.2888431	Recipes
 fa144b511bb6762326ec4e8180c54f9a94e25fed data/hardcraft/advancements/recipes/building_blocks/bush_sticks_slab.json
 5fdc8fc7d2947d68daa9fdc8ca4c93b2a17dee36 data/hardcraft/advancements/recipes/building_blocks/bush_sticks_stairs.json
 f97ba8bb72caf5ab41418f5cf0b7bd4c346fecbd data/hardcraft/advancements/recipes/misc/bush_stick.json
@@ -23,3 +23,5 @@ b98a45544a88d9d70ce25a110d8a88609c53db12 data/hardcraft/recipes/silver_ingot_fro
 70326eb04ae0b7c5dbe8365a5d20cd9b486c7a31 data/hardcraft/recipes/silver_ingot_from_smelting_deepslate_silver_ore.json
 c7fce85dfc5a8c0722ddc52860af9f0433c9f895 data/hardcraft/recipes/silver_ingot_from_smelting_raw_silver.json
 5b8214eac59e767d15e7668439fde5f46992b5af data/hardcraft/recipes/silver_ingot_from_smelting_silver_ore.json
+661184b7e997dd870997832aaf5cb58bc5251778 data/minecraft/advancements/recipes/misc/crafting_table.json
+5a6e8e4118cd6735038bee6e20bd938164570793 data/minecraft/recipes/crafting_table.json
