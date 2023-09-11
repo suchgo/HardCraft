@@ -26,13 +26,13 @@ public class ModDamageTypeTagsProvider extends DamageTypeTagsProvider {
     @Override
     protected void addTags(HolderLookup.@NotNull Provider pProvider) {
         // Bleeding
-        this.tag(TagInit.DamageTypes.IS_BLEEDING).add(
-                DamageTypeInit.BLEEDING
+        this.tag(TagInit.DamageTypes.IS_BLEEDING).addOptional(
+                DamageTypeInit.BLEEDING.location()
         );
 
         // Injury
-        this.tag(TagInit.DamageTypes.IS_INJURY).add(
-                DamageTypeInit.INJURY
+        this.tag(TagInit.DamageTypes.IS_INJURY).addOptional(
+                DamageTypeInit.INJURY.location()
         );
     }
 

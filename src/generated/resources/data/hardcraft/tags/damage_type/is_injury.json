@@ -1,5 +1,8 @@
 {
   "values": [
-    "hardcraft:injury"
+    {
+      "id": "hardcraft:injury",
+      "required": false
+    }
   ]
 }
