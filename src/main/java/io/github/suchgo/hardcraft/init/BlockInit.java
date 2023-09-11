@@ -1,9 +1,6 @@
 package io.github.suchgo.hardcraft.init;
 
-import io.github.suchgo.hardcraft.block.GemEmpoweringStationBlock;
-import io.github.suchgo.hardcraft.block.RockBlock;
-import io.github.suchgo.hardcraft.block.SoundBlock;
-import io.github.suchgo.hardcraft.block.WildBushBlock;
+import io.github.suchgo.hardcraft.block.*;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.*;
@@ -58,6 +55,9 @@ public class BlockInit {
 
     // Plants
     public static final RegistryObject<Block> WILD_BUSH_BLOCK = BLOCKS.register("wild_bush", () -> new WildBushBlock(BlockBehaviour.Properties.of().strength(0.2f).mapColor(MapColor.PLANT).replaceable().noCollission().sound(SoundType.GRASS).ignitedByLava().pushReaction(PushReaction.DESTROY)));
+
+    // Crops
+    public static final RegistryObject<Block> PLANTAIN_BLOCK = BLOCKS.register("plantain", () -> new PlantainBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP).pushReaction(PushReaction.DESTROY)));
 
     // Ores
     public static final RegistryObject<Block> SILVER_ORE = BLOCKS.register("silver_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_ORE), UniformInt.of(1, 3)));

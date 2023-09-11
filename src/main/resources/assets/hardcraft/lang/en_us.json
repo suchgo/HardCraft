@@ -1,18 +1,12 @@
 {
-  "item.hardcraft.bush_stick": "Bush stick",
-  "block.hardcraft.bush_sticks_block": "Block of bush sticks",
-  "block.hardcraft.wild_bush": "Wild bush",
-  "item.hardcraft.primitive_axe": "Primitive axe",
   "block.hardcraft.silver_ore": "Silver ore",
   "block.hardcraft.deepslate_silver_ore": "Deepslate silver ore",
-  "item.hardcraft.grass_thread": "Grass thread",
-  "item.hardcraft.metal_detector": "Metal detector",
-  "item.hardcraft.metal_detector.valuables": "Found: %s at (%s, %s, %s)",
-  "item.hardcraft.metal_detector.no_valuables": "Nothing found",
-  "tooltip.hardcraft.metal_detector": "Finds valuable §eOres§r",
-  "block.hardcraft.sound_block": "Sound block",
-  "item.hardcraft.kohlrabi": "Kohlrabi",
-  "item.hardcraft.peat_brick": "Peat brick",
+
+  "block.hardcraft.wild_bush": "Wild bush",
+  "block.hardcraft.plantain": "Plantain",
+  "block.hardcraft.rock": "Rock",
+
+  "block.hardcraft.bush_sticks_block": "Block of bush sticks",
   "block.hardcraft.bush_sticks_stairs": "Bush sticks stairs",
   "block.hardcraft.bush_sticks_slab": "Bush sticks slab",
   "block.hardcraft.bush_sticks_pressure_plate": "Bush sticks pressure plate",
@@ -22,21 +16,43 @@
   "block.hardcraft.bush_sticks_wall": "Bush sticks wall",
   "block.hardcraft.bush_sticks_door": "Bush sticks door",
   "block.hardcraft.bush_sticks_trapdoor": "Bush sticks trapdoor",
+
+  "block.hardcraft.sound_block": "Sound block",
+  "block.hardcraft.gem_empowering_station": "Gem empowering station",
+
+  "item.hardcraft.bush_stick": "Bush stick",
+  "item.hardcraft.grass_thread": "Grass thread",
+  "item.hardcraft.peat_brick": "Peat brick",
   "item.hardcraft.raw_silver": "Raw silver",
   "item.hardcraft.silver_ingot": "Silver ingot",
   "item.hardcraft.bandage": "Bandage",
+
+  "item.hardcraft.kohlrabi": "Kohlrabi",
+  "item.hardcraft.plantain_leaf": "Plantain leaf",
+
+  "item.hardcraft.primitive_axe": "Primitive axe",
+
+  "item.hardcraft.metal_detector": "Metal detector",
+  "item.hardcraft.metal_detector.valuables": "Found: %s at (%s, %s, %s)",
+  "item.hardcraft.metal_detector.no_valuables": "Nothing found",
+
   "tooltip.hardcraft.bandage": "Stops bleeding and heals",
+
+  "tooltip.hardcraft.metal_detector": "Finds valuable §eOres§r",
+
+  "tooltip.hardcraft.liquid.amount.with.capacity": "%s / %s mB",
+  "tooltip.hardcraft.liquid.amount": "%s mB",
+
   "sounds.hardcraft.bandage_use": "Bandage used",
+
   "effect.hardcraft.bleeding": "Bleeding",
+
   "advancements.hardcraft.root.description": "Hard, harder, pain...",
   "advancements.hardcraft.primitive_axe.title": "First tool",
   "advancements.hardcraft.primitive_axe.description": "Craft %s",
   "advancements.hardcraft.metal_detector.title": "Ore founder",
   "advancements.hardcraft.metal_detector.description": "Craft %s",
-  "block.hardcraft.rock": "Rock",
-  "block.hardcraft.gem_empowering_station": "Gem empowering station",
-  "tooltip.hardcraft.liquid.amount.with.capacity": "%s / %s mB",
-  "tooltip.hardcraft.liquid.amount": "%s mB",
+
   "death.attack.bleeding": "%1$s bled to death",
   "death.attack.bleeding.player": "%1$s bled from %2$s",
   "death.attack.injury": "%1$s inflicted fatal injury on himself"

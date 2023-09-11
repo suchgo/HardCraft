@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-09T14:09:42.5001971	Block States: hardcraft
+// 1.20.1	2023-09-11T19:50:04.8301152	Block States: hardcraft
 bacd10c0ccfe123c31eda6940054b6fc525a5476 assets/hardcraft/blockstates/bush_sticks_block.json
 0dbbf1345b77d8a01bc6fdcd27154f7c3a1b1ee0 assets/hardcraft/blockstates/bush_sticks_button.json
 932944a4501acfd655f642ee09bb6cfb747d7d76 assets/hardcraft/blockstates/bush_sticks_door.json
@@ -11,6 +11,7 @@ c524b8c61c7340de9639bcb68a1aaba843d5b966 assets/hardcraft/blockstates/bush_stick
 1c27b0b3191ed4bd7044bea0c73422189630c6d5 assets/hardcraft/blockstates/bush_sticks_wall.json
 68c14522e5e3174705dfbeae3ca4ea1a453223b7 assets/hardcraft/blockstates/deepslate_silver_ore.json
 cc695938190a12198a883dac3763d2d7fa9eb8b4 assets/hardcraft/blockstates/gem_empowering_station.json
+8d8d9deb7e5017376e5089524935a53c4d9de388 assets/hardcraft/blockstates/plantain.json
 e91882753a025ee1ff78e8161f3d44ea306b8e2f assets/hardcraft/blockstates/rock.json
 b2cb0bf0339a51087863eff65fb0025809759505 assets/hardcraft/blockstates/silver_ore.json
 48c0eaabfb5ce89c33b107acd179b372a8713ac7 assets/hardcraft/blockstates/sound_block.json
@@ -47,6 +48,10 @@ d968029d1af34d606cf6c73c96f04a0e0f6fac4e assets/hardcraft/models/block/bush_stic
 dfa3610161543ffd762ba4c278616a1102d37566 assets/hardcraft/models/block/bush_sticks_wall_side_tall.json
 fa2992f85fc296e30b78781f6cfb6ca78ac2eef7 assets/hardcraft/models/block/deepslate_silver_ore.json
 6d8da77155b5327134593f5e95af8f2274721e42 assets/hardcraft/models/block/gem_empowering_station.json
+9a1a78c19eb9ad685090ad2fa5f1059be91aeecd assets/hardcraft/models/block/plantain_stage0.json
+12686f1cce1a17c11c81cf7d4af93ec046c9be97 assets/hardcraft/models/block/plantain_stage1.json
+350ccb917f1c2dbfd60546640a552d9341007171 assets/hardcraft/models/block/plantain_stage2.json
+3fd0922061e525bf3b1ba5c4d8d81afa8f39ab07 assets/hardcraft/models/block/plantain_stage3.json
 7792cbb4f726ee1759cbe541a4d410323ca7f10f assets/hardcraft/models/block/silver_ore.json
 63bdebc8eb314193f731600598e565db6a502743 assets/hardcraft/models/block/sound_block.json
 49d08b3af96a325d9ab82736a447e2c3f53baee2 assets/hardcraft/models/block/wild_bush.json

@@ -1,14 +1,21 @@
 package io.github.suchgo.hardcraft.datagen;
 
 import io.github.suchgo.hardcraft.HardCraft;
+import io.github.suchgo.hardcraft.block.custom.ModCropBlock;
 import io.github.suchgo.hardcraft.init.BlockInit;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -57,7 +64,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         buttonBlock((ButtonBlock) BlockInit.BUSH_STICKS_BUTTON.get(), blockTexture(BlockInit.BUSH_STICKS_BLOCK.get()));
 
         // Plants
-        simpleBlock(BlockInit.WILD_BUSH_BLOCK.get(), models().singleTexture(BlockInit.WILD_BUSH_BLOCK.getId().getPath(), mcLoc("block/tinted_cross"), "cross", blockTexture(BlockInit.WILD_BUSH_BLOCK.get())).renderType("cutout"));
+        plantTintBlock(BlockInit.WILD_BUSH_BLOCK);
+
+        // Crops
+        cropBlock(BlockInit.PLANTAIN_BLOCK, true);
 
         // Ores
         blockWithItem(BlockInit.SILVER_ORE);
@@ -74,5 +84,34 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    }
+
+    private void plantBlock(RegistryObject<Block> block) {
+        simpleBlock(block.get(), models().cross(block.getId().getPath(), blockTexture(block.get())).renderType("cutout"));
+    }
+
+    private void plantTintBlock(RegistryObject<Block> block) {
+        simpleBlock(block.get(), models().singleTexture(block.getId().getPath(), mcLoc("block/tinted_cross"), "cross", blockTexture(block.get())).renderType("cutout"));
+    }
+
+    public void cropBlock(RegistryObject<Block> block, boolean cross) {
+        CropBlock cropBlock = (ModCropBlock)block.get();
+        String name = block.getId().getPath() + "_stage";
+        Function<BlockState, ConfiguredModel[]> function = state -> states(state, cropBlock, name, name, cross);
+
+        getVariantBuilder(cropBlock).forAllStates(function);
+    }
+
+    private ConfiguredModel[] states(BlockState state, CropBlock block, String modelName, String textureName, boolean cross) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        int age = state.getValue(((ModCropBlock) block).getAgeProperty());
+        if (cross) {
+            models[0] = new ConfiguredModel(models().cross(modelName + age, new ResourceLocation(HardCraft.MODID, "block/" + textureName + age)).renderType("cutout"));
+        }
+        else {
+            models[0] = new ConfiguredModel(models().crop(modelName + age, new ResourceLocation(HardCraft.MODID, "block/" + textureName + age)).renderType("cutout"));
+        }
+
+        return models;
     }
 }

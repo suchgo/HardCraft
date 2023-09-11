@@ -1,18 +1,12 @@
 {
-  "item.hardcraft.bush_stick": "Кустовая палка",
-  "block.hardcraft.bush_sticks_block": "Блок кустовых палочек",
-  "block.hardcraft.wild_bush": "Дикий куст",
-  "item.hardcraft.primitive_axe": "Примитивный топор",
   "block.hardcraft.silver_ore": "Серебряная руда",
   "block.hardcraft.deepslate_silver_ore": "Сереброносный глубинный сланец",
-  "item.hardcraft.grass_thread": "Травяная нить",
-  "item.hardcraft.metal_detector": "Металлоискатель",
-  "item.hardcraft.metal_detector.valuables": "Найдено: %s около (%s, %s, %s)",
-  "item.hardcraft.metal_detector.no_valuables": "Ничего не найдено",
-  "tooltip.hardcraft.metal_detector": "Находит ценные §eРуды§r",
-  "block.hardcraft.sound_block": "Звуковой блок",
-  "item.hardcraft.kohlrabi": "Кольраби",
-  "item.hardcraft.peat_brick": "Торфяной кирпич",
+
+  "block.hardcraft.wild_bush": "Дикий куст",
+  "block.hardcraft.plantain": "Подорожник",
+  "block.hardcraft.rock": "Камень",
+
+  "block.hardcraft.bush_sticks_block": "Блок кустовых палочек",
   "block.hardcraft.bush_sticks_stairs": "Лестница кустовых палочек",
   "block.hardcraft.bush_sticks_slab": "Плита кустовых палочек",
   "block.hardcraft.bush_sticks_pressure_plate": "Нажимная плита кустовых палочек",
@@ -22,21 +16,43 @@
   "block.hardcraft.bush_sticks_wall": "Стена из кустовых палочек",
   "block.hardcraft.bush_sticks_door": "Дверь из кустовых палочек",
   "block.hardcraft.bush_sticks_trapdoor": "Люк из кустовых палочек",
+
+  "block.hardcraft.sound_block": "Звуковой блок",
+  "block.hardcraft.gem_empowering_station": "Станция зарядки кристалов",
+
+  "item.hardcraft.bush_stick": "Кустовая палка",
+  "item.hardcraft.grass_thread": "Травяная нить",
+  "item.hardcraft.peat_brick": "Торфяной кирпич",
   "item.hardcraft.raw_silver": "Рудное серебро",
   "item.hardcraft.silver_ingot": "Серебряный слиток",
   "item.hardcraft.bandage": "Бинт",
+
+  "item.hardcraft.kohlrabi": "Кольраби",
+  "item.hardcraft.plantain_leaf": "Лист подорожника",
+
+  "item.hardcraft.primitive_axe": "Примитивный топор",
+
+  "item.hardcraft.metal_detector": "Металлоискатель",
+  "item.hardcraft.metal_detector.valuables": "Найдено: %s около (%s, %s, %s)",
+  "item.hardcraft.metal_detector.no_valuables": "Ничего не найдено",
+
   "tooltip.hardcraft.bandage": "Останавливает кровотечение и исцеляет",
+
+  "tooltip.hardcraft.metal_detector": "Находит ценные §eРуды§r",
+
+  "tooltip.hardcraft.liquid.amount.with.capacity": "%s / %s mB",
+  "tooltip.hardcraft.liquid.amount": "%s mB",
+
   "sounds.hardcraft.bandage_use": "Использование бинта",
+
   "effect.hardcraft.bleeding": "Кровотечение",
+
   "advancements.hardcraft.root.description": "Сложно, сложнее, боль...",
   "advancements.hardcraft.primitive_axe.title": "Первый инструмент",
   "advancements.hardcraft.primitive_axe.description": "Создайте %s",
   "advancements.hardcraft.metal_detector.title": "Искатель руд",
   "advancements.hardcraft.metal_detector.description": "Создайте %s",
-  "block.hardcraft.rock": "Камень",
-  "block.hardcraft.gem_empowering_station": "Станция зарядки кристалов",
-  "tooltip.hardcraft.liquid.amount.with.capacity": "%s / %s mB",
-  "tooltip.hardcraft.liquid.amount": "%s mB",
+
   "death.attack.bleeding": "%1$s истёк кровью",
   "death.attack.bleeding.player": "%1$s истёк кровью от %2$s",
   "death.attack.injury": "%1$s нанёс себе смертельную травму"

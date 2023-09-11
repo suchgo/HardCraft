@@ -1,10 +1,14 @@
 package io.github.suchgo.hardcraft.datagen.loot;
 
+import io.github.suchgo.hardcraft.block.custom.ModCropBlock;
 import io.github.suchgo.hardcraft.init.BlockInit;
 import io.github.suchgo.hardcraft.init.ItemInit;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
@@ -55,6 +59,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         // Plants
         this.add(BlockInit.WILD_BUSH_BLOCK.get(), createSingleItemTable(ItemInit.BUSH_STICK_ITEM.get(), UniformGenerator.between(1f, 3f)));
 
+        // Crops
+        this.add(BlockInit.PLANTAIN_BLOCK.get(), this.createCropDrops(BlockInit.PLANTAIN_BLOCK.get(), ItemInit.PLANTAIN_LEAF_ITEM.get(), ItemInit.PLANTAIN_LEAF_ITEM.get(), cropBuilder(BlockInit.PLANTAIN_BLOCK.get())));
+
         // Ores
         this.add(BlockInit.SILVER_ORE.get(), createOreDrop(BlockInit.SILVER_ORE.get(), ItemInit.RAW_SILVER_ITEM.get()));
         this.add(BlockInit.DEEPSLATE_SILVER_ORE.get(), createOreDrop(BlockInit.DEEPSLATE_SILVER_ORE.get(), ItemInit.RAW_SILVER_ITEM.get()));
@@ -63,5 +70,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected @NotNull Iterable<Block> getKnownBlocks() {
         return BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
+    }
+
+    private LootItemCondition.Builder cropBuilder(Block block) {
+        return LootItemBlockStatePropertyCondition.hasBlockStateProperties(block).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(((ModCropBlock) block).getAgeProperty(), ((ModCropBlock) block).getMaxAge()));
     }
 }

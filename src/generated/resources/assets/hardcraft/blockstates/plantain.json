@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "hardcraft:block/plantain_stage0"
+    },
+    "age=1": {
+      "model": "hardcraft:block/plantain_stage1"
+    },
+    "age=2": {
+      "model": "hardcraft:block/plantain_stage2"
+    },
+    "age=3": {
+      "model": "hardcraft:block/plantain_stage3"
+    }
+  }
+}
