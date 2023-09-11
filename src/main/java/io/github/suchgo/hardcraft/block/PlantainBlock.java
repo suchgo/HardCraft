@@ -21,7 +21,7 @@ import org.jetbrains.annotations.NotNull;
 public class PlantainBlock extends ModCropBlock {
     public static final int MAX_AGE = 3;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
-    private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{Block.box(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 5.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 12.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)};
+    private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{Block.box(5.0D, 0.0D, 5.0D, 11.0D, 2.0D, 11.0D), Block.box(5.0D, 0.0D, 5.0D, 11.0D, 5.0D, 11.0D), Block.box(5.0D, 0.0D, 5.0D, 11.0D, 12.0D, 11.0D), Block.box(5.0D, 0.0D, 5.0D, 11.0D, 16.0D, 11.0D)};
     public PlantainBlock(Properties properties) {
         super(properties);
     }
