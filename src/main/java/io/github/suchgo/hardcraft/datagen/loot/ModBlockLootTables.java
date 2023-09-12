@@ -60,7 +60,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(BlockInit.WILD_BUSH_BLOCK.get(), createSingleItemTable(ItemInit.BUSH_STICK_ITEM.get(), UniformGenerator.between(1f, 3f)));
 
         // Crops
-        this.add(BlockInit.PLANTAIN_BLOCK.get(), this.createCropDrops(BlockInit.PLANTAIN_BLOCK.get(), ItemInit.PLANTAIN_LEAF_ITEM.get(), ItemInit.PLANTAIN_LEAF_ITEM.get(), cropBuilder(BlockInit.PLANTAIN_BLOCK.get())));
+        this.add(BlockInit.PLANTAIN_BLOCK.get(), this.createCropDrops(BlockInit.PLANTAIN_BLOCK.get(), ItemInit.PLANTAIN_LEAF_ITEM.get(), ItemInit.PLANTAIN_SEEDS_ITEM.get(), cropBuilder(BlockInit.PLANTAIN_BLOCK.get())));
 
         // Ores
         this.add(BlockInit.SILVER_ORE.get(), createOreDrop(BlockInit.SILVER_ORE.get(), ItemInit.RAW_SILVER_ITEM.get()));

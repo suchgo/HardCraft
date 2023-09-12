@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-11T18:50:21.3775994	Item Models: hardcraft
+// 1.20.1	2023-09-12T16:17:34.5759012	Item Models: hardcraft
 4bde68a29841d2f4ca22c2484b03914da6963f12 assets/hardcraft/models/item/bandage.json
 c8bdbf1043ec9cc40c33d0333af6a88d1e0b71ef assets/hardcraft/models/item/bush_stick.json
 5474d7bea07a35a26f2fafecf8221601ed2684eb assets/hardcraft/models/item/bush_sticks_button.json
@@ -10,6 +10,7 @@ c0d009a934899939b04f0f89e66053622c989fc2 assets/hardcraft/models/item/kohlrabi.j
 ffe8dc9b55b5d23ff7cf4c9d4dc4a02adb463de4 assets/hardcraft/models/item/metal_detector.json
 16e1c2ffbb5e99418817631361f6022a5fe3015a assets/hardcraft/models/item/peat_brick.json
 fe1d0793d64290166cd768c4acb0ee9f671f85e5 assets/hardcraft/models/item/plantain_leaf.json
+1c367f068f7fb2a4efb76504988fc94949de70ee assets/hardcraft/models/item/plantain_seeds.json
 831547953b4113954baeef487e36cbbb6b5e058c assets/hardcraft/models/item/primitive_axe.json
 8a070cb5242128aa7dda103096df590e490ec6e6 assets/hardcraft/models/item/raw_silver.json
 c0682f07f7c707c2ff90bc1d3f64b22f3e1ada55 assets/hardcraft/models/item/rock.json

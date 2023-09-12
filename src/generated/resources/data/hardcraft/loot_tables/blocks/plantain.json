@@ -27,7 +27,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "hardcraft:plantain_leaf"
+              "name": "hardcraft:plantain_seeds"
             }
           ]
         }
@@ -59,7 +59,7 @@
               }
             }
           ],
-          "name": "hardcraft:plantain_leaf"
+          "name": "hardcraft:plantain_seeds"
         }
       ],
       "rolls": 1.0

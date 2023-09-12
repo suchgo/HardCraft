@@ -22,7 +22,8 @@ public class ItemInit {
     public static final RegistryObject<Item> RAW_SILVER_ITEM = addToTab(ITEMS.register("raw_silver", () -> new Item(new Item.Properties())));
     public static final RegistryObject<Item> SILVER_INGOT_ITEM = addToTab(ITEMS.register("silver_ingot", () -> new Item(new Item.Properties())));
     public static final RegistryObject<Item> BANDAGE_ITEM = addToTab(ITEMS.register("bandage", () -> new BandageItem(new Item.Properties())));
-    public static final RegistryObject<Item> PLANTAIN_LEAF_ITEM = addToTab(ITEMS.register("plantain_leaf", () -> new ItemNameBlockItem(BlockInit.PLANTAIN_BLOCK.get(), new Item.Properties())));
+    public static final RegistryObject<Item> PLANTAIN_LEAF_ITEM = addToTab(ITEMS.register("plantain_leaf", () -> new Item(new Item.Properties())));
+    public static final RegistryObject<Item> PLANTAIN_SEEDS_ITEM = addToTab(ITEMS.register("plantain_seeds", () -> new ItemNameBlockItem(BlockInit.PLANTAIN_BLOCK.get(), new Item.Properties())));
 
     // Tools
     public static final RegistryObject<Item> PRIMITIVE_AXE = addToTab(ITEMS.register("primitive_axe", () -> new AxeItem(Tiers.WOOD, 2, -3.4f, new Item.Properties().durability(50))));

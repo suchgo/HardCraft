@@ -28,7 +28,7 @@ public class PlantainBlock extends ModCropBlock {
 
     @Override
     protected @NotNull ItemLike getBaseSeedId() {
-        return ItemInit.PLANTAIN_LEAF_ITEM.get();
+        return ItemInit.PLANTAIN_SEEDS_ITEM.get();
     }
 
     @Override

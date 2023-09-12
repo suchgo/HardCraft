@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-11T20:13:14.5270029	Loot Tables
+// 1.20.1	2023-09-12T16:27:13.3216399	Loot Tables
 bf88f8140aae7add00170d8e81ad101db852b166 data/hardcraft/loot_tables/blocks/bush_sticks_block.json
 351dfb3029143df600e1e6b710456ee5493b3c09 data/hardcraft/loot_tables/blocks/bush_sticks_button.json
 0f3b6023edbd60e6bd6b6fd12cdb7da16e798877 data/hardcraft/loot_tables/blocks/bush_sticks_door.json
@@ -11,7 +11,7 @@ d3d2ca70de8d122f9b3423e8816a9fc5c65ed6c8 data/hardcraft/loot_tables/blocks/bush_
 3249a9734feeee493f51b24f6a27d34f6634bded data/hardcraft/loot_tables/blocks/bush_sticks_wall.json
 739931ca2ae47159af7937f5711af5b43ee25523 data/hardcraft/loot_tables/blocks/deepslate_silver_ore.json
 63b72c44bcbca4bbefb130baccaaf4498908c86a data/hardcraft/loot_tables/blocks/gem_empowering_station.json
-b08670cd8faab003ed5f5db766357c08513d9d5a data/hardcraft/loot_tables/blocks/plantain.json
+aebb91a107277c257470771c508da3d549bd7269 data/hardcraft/loot_tables/blocks/plantain.json
 18fad6bccc043ef221627cc2276d6791b2caf445 data/hardcraft/loot_tables/blocks/rock.json
 8c56115c32d67158bdac06439af400ab99e18273 data/hardcraft/loot_tables/blocks/silver_ore.json
 bc1acc28476b0365b48b42b761bde2dd55b0a1e7 data/hardcraft/loot_tables/blocks/sound_block.json
