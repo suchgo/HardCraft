@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_bush_sticks_block": {
+    "has_grass_thread": {
       "conditions": {
         "items": [
           {
             "items": [
-              "hardcraft:bush_sticks_block"
+              "hardcraft:grass_thread"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:crafting_table"
+        "recipe": "hardcraft:grass_fabric"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_bush_sticks_block",
+      "has_grass_thread",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:crafting_table"
+      "hardcraft:grass_fabric"
     ]
   },
   "sends_telemetry_event": false

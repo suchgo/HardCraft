@@ -4,15 +4,24 @@ import io.github.suchgo.hardcraft.HardCraft;
 import io.github.suchgo.hardcraft.datagen.custom.GemEmpoweringRecipeBuilder;
 import io.github.suchgo.hardcraft.init.BlockInit;
 import io.github.suchgo.hardcraft.init.ItemInit;
+import net.minecraft.advancements.CriterionTriggerInstance;
+import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.advancements.critereon.PlayerTrigger;
+import net.minecraft.advancements.critereon.TagPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import org.jetbrains.annotations.NotNull;
 
@@ -32,15 +41,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(@NotNull Consumer<FinishedRecipe> pWriter) {
-        /*ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemInit.BUSH_STICK_ITEM.get(), 9)
-                .requires(BlockInit.BUSH_STICKS_BLOCK.get())
-                .unlockedBy("has_bush_sticks_block", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(BlockInit.BUSH_STICKS_BLOCK.get()).build()))
-                .save(pWriter);*/
-
         // Simple blocks/items
         nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ItemInit.BUSH_STICK_ITEM.get(), RecipeCategory.MISC, BlockInit.BUSH_STICKS_BLOCK.get(),
                 HardCraft.MODID + ":bush_stick", "bush_stick",HardCraft.MODID + ":bush_sticks_block", "bush_sticks_block");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemInit.GRASS_FABRIC_ITEM.get(), 1)
+                .requires(ItemInit.GRASS_THREAD_ITEM.get(), 4)
+                .unlockedBy(getHasName(ItemInit.GRASS_THREAD_ITEM.get()), has(ItemInit.GRASS_THREAD_ITEM.get()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemInit.BANDAGE_ITEM.get(), 1)
+                .requires(ItemInit.GRASS_FABRIC_ITEM.get(), 3)
+                .requires(ItemInit.PLANTAIN_LEAF_ITEM.get())
+                .unlockedBy("has_grass_thread_or_has_plantain_leaf", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ItemInit.GRASS_THREAD_ITEM.get(), ItemInit.PLANTAIN_LEAF_ITEM.get()).build()))
+                .save(pWriter);
 
         // Tools
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ItemInit.PRIMITIVE_AXE.get())
@@ -67,34 +82,30 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Empowering
         new GemEmpoweringRecipeBuilder(ItemInit.RAW_SILVER_ITEM.get(), ItemInit.SILVER_INGOT_ITEM.get(), 3)
-                .unlockedBy("has_raw_silver", has(ItemInit.RAW_SILVER_ITEM.get())).save(pWriter);
+                .unlockedBy(getHasName(ItemInit.RAW_SILVER_ITEM.get()), has(ItemInit.RAW_SILVER_ITEM.get())).save(pWriter);
 
         // Override vanilla
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.CRAFTING_TABLE)
-                .pattern("BB")
-                .define('B', BlockInit.BUSH_STICKS_BLOCK.get())
-                .unlockedBy("has_bush_sticks_block", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(BlockInit.BUSH_STICKS_BLOCK.get()).build()))
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Blocks.CRAFTING_TABLE, 1)
+                .pattern("P#")
+                .pattern("##")
+                .define('P', ItemInit.PRIMITIVE_AXE.get())
+                .define('#', ItemTags.PLANKS)
+                .unlockedBy("unlock_right_away", PlayerTrigger.TriggerInstance.tick())
+                .showNotification(false)
                 .save(pWriter);
     }
 
-    protected static void oreSmelting(@NotNull Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult,
-                                      float pExperience, int pCookingTIme, @NotNull String pGroup) {
-        oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult,
-                pExperience, pCookingTIme, pGroup, "_from_smelting");
+    protected static void oreSmelting(@NotNull Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult, float pExperience, int pCookingTIme, @NotNull String pGroup) {
+        oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_smelting");
     }
 
-    protected static void oreBlasting(@NotNull Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult,
-                                      float pExperience, int pCookingTime, @NotNull String pGroup) {
-        oreCooking(pFinishedRecipeConsumer, RecipeSerializer.BLASTING_RECIPE, pIngredients, pCategory, pResult,
-                pExperience, pCookingTime, pGroup, "_from_blasting");
+    protected static void oreBlasting(@NotNull Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult, float pExperience, int pCookingTime, @NotNull String pGroup) {
+        oreCooking(pFinishedRecipeConsumer, RecipeSerializer.BLASTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_blasting");
     }
 
-    protected static void oreCooking(@NotNull Consumer<FinishedRecipe> pFinishedRecipeConsumer, @NotNull RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer,
-                                     List<ItemLike> pIngredients, @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult, float pExperience, int pCookingTime, @NotNull String pGroup, String pRecipeName) {
+    protected static void oreCooking(@NotNull Consumer<FinishedRecipe> pFinishedRecipeConsumer, @NotNull RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer, List<ItemLike> pIngredients, @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult, float pExperience, int pCookingTime, @NotNull String pGroup, String pRecipeName) {
         for(ItemLike itemlike : pIngredients) {
-            SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime,
-                            pCookingSerializer).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
+            SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime, pCookingSerializer).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
                     .save(pFinishedRecipeConsumer, HardCraft.MODID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
     }

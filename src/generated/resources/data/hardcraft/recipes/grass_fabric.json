@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "hardcraft:grass_thread"
+    },
+    {
+      "item": "hardcraft:grass_thread"
+    },
+    {
+      "item": "hardcraft:grass_thread"
+    },
+    {
+      "item": "hardcraft:grass_thread"
+    }
+  ],
+  "result": {
+    "item": "hardcraft:grass_fabric"
+  }
+}

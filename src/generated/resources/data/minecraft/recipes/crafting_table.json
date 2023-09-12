@@ -2,15 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": {
-      "item": "hardcraft:bush_sticks_block"
+    "#": {
+      "tag": "minecraft:planks"
+    },
+    "P": {
+      "item": "hardcraft:primitive_axe"
     }
   },
   "pattern": [
-    "BB"
+    "P#",
+    "##"
   ],
   "result": {
     "item": "minecraft:crafting_table"
   },
-  "show_notification": true
+  "show_notification": false
 }

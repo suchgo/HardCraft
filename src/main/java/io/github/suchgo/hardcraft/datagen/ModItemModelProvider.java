@@ -24,6 +24,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         // Items/Resources
         simpleItem(ItemInit.BUSH_STICK_ITEM);
         simpleItem(ItemInit.GRASS_THREAD_ITEM);
+        simpleItem(ItemInit.GRASS_FABRIC_ITEM);
         simpleItem(ItemInit.PEAT_BRICK_ITEM);
         simpleItem(ItemInit.RAW_SILVER_ITEM);
         simpleItem(ItemInit.SILVER_INGOT_ITEM);
