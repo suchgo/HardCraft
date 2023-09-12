@@ -20,13 +20,25 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
         add("grass_thread_from_grass", new AddItemModifier(new LootItemCondition[] {
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
                 ExplosionCondition.survivesExplosion().build(),
-                LootItemRandomChanceCondition.randomChance(0.4f).build()
+                LootItemRandomChanceCondition.randomChance(0.7f).build()
         }, ItemInit.GRASS_THREAD_ITEM.get()));
 
         add("grass_thread_from_tall_grass", new AddItemModifier(new LootItemCondition[] {
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.TALL_GRASS).build(),
                 ExplosionCondition.survivesExplosion().build(),
-                LootItemRandomChanceCondition.randomChance(0.4f).build()
+                LootItemRandomChanceCondition.randomChance(0.7f).build()
+        }, ItemInit.GRASS_THREAD_ITEM.get()));
+
+        add("grass_thread_from_fern", new AddItemModifier(new LootItemCondition[] {
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.FERN).build(),
+                ExplosionCondition.survivesExplosion().build(),
+                LootItemRandomChanceCondition.randomChance(0.7f).build()
+        }, ItemInit.GRASS_THREAD_ITEM.get()));
+
+        add("grass_thread_from_large_fern", new AddItemModifier(new LootItemCondition[] {
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.LARGE_FERN).build(),
+                ExplosionCondition.survivesExplosion().build(),
+                LootItemRandomChanceCondition.randomChance(0.7f).build()
         }, ItemInit.GRASS_THREAD_ITEM.get()));
 
         add("metal_detector_from_zombie", new AddItemModifier(new LootItemCondition[] {

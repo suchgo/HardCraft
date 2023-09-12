@@ -27,8 +27,11 @@ import java.util.function.Consumer;
 
 public class BandageItem extends Item {
     private boolean shouldPlayUseSound = false;
-    public BandageItem(Properties properties) {
+    private final float healValue;
+    public BandageItem(Properties properties, float healValue) {
         super(properties);
+
+        this.healValue = healValue;
     }
 
     @Override
@@ -51,7 +54,7 @@ public class BandageItem extends Item {
 
     @Override
     public @NotNull ItemStack finishUsingItem(@NotNull ItemStack itemStack, @NotNull Level level, @NotNull LivingEntity livingEntity) {
-        livingEntity.heal(4f);
+        livingEntity.heal(healValue);
         livingEntity.removeEffect(EffectInit.BLEEDING_EFFECT.get());
 
         if (!(livingEntity instanceof Player) || !((Player)livingEntity).getAbilities().instabuild) {

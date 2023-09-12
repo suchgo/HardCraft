@@ -4,24 +4,16 @@ import io.github.suchgo.hardcraft.HardCraft;
 import io.github.suchgo.hardcraft.datagen.custom.GemEmpoweringRecipeBuilder;
 import io.github.suchgo.hardcraft.init.BlockInit;
 import io.github.suchgo.hardcraft.init.ItemInit;
-import net.minecraft.advancements.CriterionTriggerInstance;
-import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.advancements.critereon.PlayerTrigger;
-import net.minecraft.advancements.critereon.TagPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import org.jetbrains.annotations.NotNull;
 
@@ -50,7 +42,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ItemInit.GRASS_THREAD_ITEM.get()), has(ItemInit.GRASS_THREAD_ITEM.get()))
                 .save(pWriter);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemInit.BANDAGE_ITEM.get(), 1)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemInit.GRASS_BANDAGE_ITEM.get(), 1)
                 .requires(ItemInit.GRASS_FABRIC_ITEM.get(), 3)
                 .requires(ItemInit.PLANTAIN_LEAF_ITEM.get())
                 .unlockedBy("has_grass_thread_or_has_plantain_leaf", inventoryTrigger(ItemPredicate.Builder.item().

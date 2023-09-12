@@ -1,7 +1,9 @@
 {
   "entries": [
+    "hardcraft:grass_thread_from_large_fern",
     "hardcraft:grass_thread_from_tall_grass",
     "hardcraft:metal_detector_from_zombie",
+    "hardcraft:grass_thread_from_fern",
     "hardcraft:grass_thread_from_grass"
   ],
   "replace": false

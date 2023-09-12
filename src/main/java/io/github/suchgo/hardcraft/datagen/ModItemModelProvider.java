@@ -8,7 +8,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -28,7 +27,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ItemInit.PEAT_BRICK_ITEM);
         simpleItem(ItemInit.RAW_SILVER_ITEM);
         simpleItem(ItemInit.SILVER_INGOT_ITEM);
-        simpleItem(ItemInit.BANDAGE_ITEM);
+        simpleItem(ItemInit.GRASS_BANDAGE_ITEM);
         simpleItem(ItemInit.PLANTAIN_LEAF_ITEM);
         simpleItem(ItemInit.PLANTAIN_SEEDS_ITEM);
 

@@ -22,7 +22,7 @@ public class ItemInit {
     public static final RegistryObject<Item> PEAT_BRICK_ITEM = addToTab(ITEMS.register("peat_brick", () -> new FuelItem(new Item.Properties(), 200)));
     public static final RegistryObject<Item> RAW_SILVER_ITEM = addToTab(ITEMS.register("raw_silver", () -> new Item(new Item.Properties())));
     public static final RegistryObject<Item> SILVER_INGOT_ITEM = addToTab(ITEMS.register("silver_ingot", () -> new Item(new Item.Properties())));
-    public static final RegistryObject<Item> BANDAGE_ITEM = addToTab(ITEMS.register("bandage", () -> new BandageItem(new Item.Properties())));
+    public static final RegistryObject<Item> GRASS_BANDAGE_ITEM = addToTab(ITEMS.register("grass_bandage", () -> new BandageItem(new Item.Properties(), 2f)));
     public static final RegistryObject<Item> PLANTAIN_LEAF_ITEM = addToTab(ITEMS.register("plantain_leaf", () -> new Item(new Item.Properties())));
     public static final RegistryObject<Item> PLANTAIN_SEEDS_ITEM = addToTab(ITEMS.register("plantain_seeds", () -> new ItemNameBlockItem(BlockInit.PLANTAIN_BLOCK.get(), new Item.Properties())));
 

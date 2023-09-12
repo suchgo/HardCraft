@@ -1,5 +1,7 @@
-// 1.20.1	2023-09-09T14:09:42.5041988	Global Loot Modifiers : hardcraft
-be64852a991977c951b96dda652f6f753baec2ec data/forge/loot_modifiers/global_loot_modifiers.json
-e5414b41f7339e2d4b78fd39e981414f6e6d6b42 data/hardcraft/loot_modifiers/grass_thread_from_grass.json
-037b2e7a48ec5d3e79f63d65208bbdc261bd3475 data/hardcraft/loot_modifiers/grass_thread_from_tall_grass.json
+// 1.20.1	2023-09-12T21:27:56.5532698	Global Loot Modifiers : hardcraft
+d79197cc186a1cf584e5840d71e0a5cce0c508ee data/forge/loot_modifiers/global_loot_modifiers.json
+b51cd21a20f2823dab43729106e92f051cd7d3fc data/hardcraft/loot_modifiers/grass_thread_from_fern.json
+8a1c2efdc7e9e390a158bb2130dfb0e599b6583a data/hardcraft/loot_modifiers/grass_thread_from_grass.json
+9dbb01d04709361d1d085be0c869943b932825b5 data/hardcraft/loot_modifiers/grass_thread_from_large_fern.json
+b03c20feeb4335be844327446a4f5c0882f7b6da data/hardcraft/loot_modifiers/grass_thread_from_tall_grass.json
 6a168c915253d4b3f78fd6f6391da93dffaabe4e data/hardcraft/loot_modifiers/metal_detector_from_zombie.json
