@@ -6,7 +6,9 @@ import io.github.suchgo.hardcraft.init.ItemInit;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.level.block.BedBlock;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
@@ -28,12 +30,13 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(BlockInit.BUSH_STICKS_BLOCK.get(), createSingleItemTable(ItemInit.BUSH_STICK_ITEM.get(), ConstantValue.exactly(9f)));
         this.dropSelf(BlockInit.ROCK_BLOCK.get());
         this.dropSelf(BlockInit.GEM_EMPOWERING_STATION_BLOCK.get());
+        this.add(BlockInit.TENT_HERBAL_BED_BLOCK.get(), block -> createSinglePropConditionTable(block, BedBlock.PART, BedPart.HEAD));
 
         // Stairs
         this.dropSelf(BlockInit.BUSH_STICKS_STAIRS.get());
 
         // Slabs
-        this.add(BlockInit.BUSH_STICKS_SLAB.get(), createSlabItemTable(BlockInit.BUSH_STICKS_SLAB.get()));
+        this.add(BlockInit.BUSH_STICKS_SLAB.get(), this::createSlabItemTable);
 
         // Fences
         this.dropSelf(BlockInit.BUSH_STICKS_FENCE.get());
@@ -45,7 +48,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(BlockInit.BUSH_STICKS_WALL.get());
 
         // Doors
-        this.add(BlockInit.BUSH_STICKS_DOOR.get(), block -> createDoorTable(BlockInit.BUSH_STICKS_DOOR.get()));
+        this.add(BlockInit.BUSH_STICKS_DOOR.get(), this::createDoorTable);
 
         // Trapdoors
         this.dropSelf(BlockInit.BUSH_STICKS_TRAPDOOR.get());
@@ -60,11 +63,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(BlockInit.WILD_BUSH_BLOCK.get(), createSingleItemTable(ItemInit.BUSH_STICK_ITEM.get(), UniformGenerator.between(1f, 3f)));
 
         // Crops
-        this.add(BlockInit.PLANTAIN_BLOCK.get(), this.createCropDrops(BlockInit.PLANTAIN_BLOCK.get(), ItemInit.PLANTAIN_LEAF_ITEM.get(), ItemInit.PLANTAIN_SEEDS_ITEM.get(), cropBuilder(BlockInit.PLANTAIN_BLOCK.get())));
+        this.add(BlockInit.PLANTAIN_BLOCK.get(), block -> this.createCropDrops(block, ItemInit.PLANTAIN_LEAF_ITEM.get(), ItemInit.PLANTAIN_SEEDS_ITEM.get(), cropBuilder(block)));
 
         // Ores
-        this.add(BlockInit.SILVER_ORE.get(), createOreDrop(BlockInit.SILVER_ORE.get(), ItemInit.RAW_SILVER_ITEM.get()));
-        this.add(BlockInit.DEEPSLATE_SILVER_ORE.get(), createOreDrop(BlockInit.DEEPSLATE_SILVER_ORE.get(), ItemInit.RAW_SILVER_ITEM.get()));
+        this.add(BlockInit.SILVER_ORE.get(), block -> createOreDrop(block, ItemInit.RAW_SILVER_ITEM.get()));
+        this.add(BlockInit.DEEPSLATE_SILVER_ORE.get(), block -> createOreDrop(block, ItemInit.RAW_SILVER_ITEM.get()));
     }
 
     @Override

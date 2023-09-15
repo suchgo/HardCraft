@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-11T19:50:04.8301152	Block States: hardcraft
+// 1.20.1	2023-09-15T00:32:13.2732544	Block States: hardcraft
 bacd10c0ccfe123c31eda6940054b6fc525a5476 assets/hardcraft/blockstates/bush_sticks_block.json
 0dbbf1345b77d8a01bc6fdcd27154f7c3a1b1ee0 assets/hardcraft/blockstates/bush_sticks_button.json
 932944a4501acfd655f642ee09bb6cfb747d7d76 assets/hardcraft/blockstates/bush_sticks_door.json
@@ -15,6 +15,7 @@ cc695938190a12198a883dac3763d2d7fa9eb8b4 assets/hardcraft/blockstates/gem_empowe
 e91882753a025ee1ff78e8161f3d44ea306b8e2f assets/hardcraft/blockstates/rock.json
 b2cb0bf0339a51087863eff65fb0025809759505 assets/hardcraft/blockstates/silver_ore.json
 48c0eaabfb5ce89c33b107acd179b372a8713ac7 assets/hardcraft/blockstates/sound_block.json
+b4934df2a7e9bc45ce02f0e43ae42c0d396f3ed9 assets/hardcraft/blockstates/tent_herbal_bed.json
 50b4f56d3a1dc778b75477c757178d1cc7ec880a assets/hardcraft/blockstates/wild_bush.json
 9696a3fe0f5385ae8e8298100c089c77f89d7deb assets/hardcraft/models/block/bush_sticks_block.json
 69f6640f1d0e12bce516ece054a2c45db1554faf assets/hardcraft/models/block/bush_sticks_button.json

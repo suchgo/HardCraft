@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-12T16:27:13.3216399	Loot Tables
+// 1.20.1	2023-09-14T20:18:22.8143695	Loot Tables
 bf88f8140aae7add00170d8e81ad101db852b166 data/hardcraft/loot_tables/blocks/bush_sticks_block.json
 351dfb3029143df600e1e6b710456ee5493b3c09 data/hardcraft/loot_tables/blocks/bush_sticks_button.json
 0f3b6023edbd60e6bd6b6fd12cdb7da16e798877 data/hardcraft/loot_tables/blocks/bush_sticks_door.json
@@ -15,4 +15,5 @@ aebb91a107277c257470771c508da3d549bd7269 data/hardcraft/loot_tables/blocks/plant
 18fad6bccc043ef221627cc2276d6791b2caf445 data/hardcraft/loot_tables/blocks/rock.json
 8c56115c32d67158bdac06439af400ab99e18273 data/hardcraft/loot_tables/blocks/silver_ore.json
 bc1acc28476b0365b48b42b761bde2dd55b0a1e7 data/hardcraft/loot_tables/blocks/sound_block.json
+4c35cd0d356a3ddb7e9fe5462dbd6fdcf940dc56 data/hardcraft/loot_tables/blocks/tent_herbal_bed.json
 247c84c3d93a323aeb9683ad2a294654a4cb6b7a data/hardcraft/loot_tables/blocks/wild_bush.json

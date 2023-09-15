@@ -3,8 +3,10 @@ package io.github.suchgo.hardcraft.init;
 import io.github.suchgo.hardcraft.block.*;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BedPart;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
@@ -22,6 +24,7 @@ public class BlockInit {
     public static final RegistryObject<Block> BUSH_STICKS_BLOCK = BLOCKS.register("bush_sticks_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).mapColor(MapColor.WOOD)));
     public static final RegistryObject<Block> SOUND_BLOCK = BLOCKS.register("sound_block", () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.NOTE_BLOCK)));
     public static final RegistryObject<Block> ROCK_BLOCK = BLOCKS.register("rock", () -> new RockBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instabreak().noOcclusion()));
+    public static final RegistryObject<Block> TENT_HERBAL_BED_BLOCK = BLOCKS.register("tent_herbal_bed", () -> new TentHerbalBedBlock(BlockBehaviour.Properties.copy(Blocks.GREEN_BED).sound(SoundType.GRASS)));
 
     // Functional blocks
     public static final RegistryObject<Block> GEM_EMPOWERING_STATION_BLOCK = BLOCKS.register("gem_empowering_station", () -> new GemEmpoweringStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
