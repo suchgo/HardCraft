@@ -57,17 +57,9 @@ public class TentHerbalBedBlock extends BedBlock {
     }
 
     @Override
-    public @NotNull InteractionResult use(@NotNull BlockState blockState, Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand interactionHand, @NotNull BlockHitResult blockHitResult) {
+    public @NotNull InteractionResult use(@NotNull BlockState blockState, @NotNull Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull InteractionHand interactionHand, @NotNull BlockHitResult blockHitResult) {
         if (level.isClientSide()) {
             return InteractionResult.CONSUME;
-        }
-
-        if (blockState.getValue(PART) != BedPart.HEAD) {
-            pos = pos.relative(blockState.getValue(FACING));
-            blockState = level.getBlockState(pos);
-            if (!blockState.is(this)) {
-                return InteractionResult.CONSUME;
-            }
         }
 
         if (!isMultiBlock(blockState, level, pos)) {
@@ -77,13 +69,14 @@ public class TentHerbalBedBlock extends BedBlock {
         return super.use(blockState, level, pos, player, interactionHand, blockHitResult);
     }
 
-    private boolean isMultiBlock(BlockState blockState, Level level, BlockPos pos) {
+    private boolean isMultiBlock(@NotNull BlockState blockState, Level level, BlockPos pos) {
         Direction facingDirection = blockState.getValue(FACING);
+        Direction connectedDirection = getConnectedDirection(blockState);
         Stream<Direction> horizontalDirections = Stream.of(facingDirection.getClockWise(), facingDirection.getCounterClockWise());
-        Stream<BlockPos> verticalBlocks = Stream.of(pos, pos.relative(facingDirection.getOpposite()));
+        Stream<BlockPos> verticalBlocks = Stream.of(pos, pos.relative(connectedDirection));
 
         return horizontalDirections.allMatch(direction -> {
-            Stream<BlockState> states = Stream.of(level.getBlockState(pos.relative(direction)), level.getBlockState(pos.relative(facingDirection.getOpposite()).relative(direction)));
+            Stream<BlockState> states = Stream.of(level.getBlockState(pos.relative(direction)), level.getBlockState(pos.relative(connectedDirection).relative(direction)));
 
             return states.allMatch(state -> state.is(BlockTags.STAIRS) && level.getBlockState(pos.relative(direction).relative(state.getValue(FACING))).is(this));
         }) && verticalBlocks.allMatch(pos1 -> level.getBlockState(pos1.above()).is(BlockTags.SLABS));

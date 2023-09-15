@@ -45,8 +45,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ItemInit.GRASS_BANDAGE_ITEM.get(), 1)
                 .requires(ItemInit.GRASS_FABRIC_ITEM.get(), 3)
                 .requires(ItemInit.PLANTAIN_LEAF_ITEM.get())
-                .unlockedBy("has_grass_thread_or_has_plantain_leaf", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ItemInit.GRASS_THREAD_ITEM.get(), ItemInit.PLANTAIN_LEAF_ITEM.get()).build()))
+                .unlockedBy("has_grass_fabric_or_has_plantain_leaf", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ItemInit.GRASS_FABRIC_ITEM.get(), ItemInit.PLANTAIN_LEAF_ITEM.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, BlockInit.TENT_HERBAL_BED_BLOCK.get())
+                .pattern("FF ")
+                .pattern("FF ")
+                .pattern("FF ")
+                .define('F', ItemInit.GRASS_FABRIC_ITEM.get())
+                .unlockedBy(getHasName(ItemInit.GRASS_FABRIC_ITEM.get()), inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ItemInit.GRASS_FABRIC_ITEM.get()).build()))
                 .save(pWriter);
 
         // Tools

@@ -1,13 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_grass_fabric_or_has_plantain_leaf": {
+    "has_grass_fabric": {
       "conditions": {
         "items": [
           {
             "items": [
-              "hardcraft:grass_fabric",
-              "hardcraft:plantain_leaf"
+              "hardcraft:grass_fabric"
             ]
           }
         ]
@@ -16,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "hardcraft:grass_bandage"
+        "recipe": "hardcraft:tent_herbal_bed"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_grass_fabric_or_has_plantain_leaf",
+      "has_grass_fabric",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "hardcraft:grass_bandage"
+      "hardcraft:tent_herbal_bed"
     ]
   },
   "sends_telemetry_event": false
